@@ -1,0 +1,5 @@
+git add: Adds files to your staged changes. Use -A to add all files in the directory
+
+git commit: Adds all staged changes to a new commit. Use -m "message here"
+
+git push origin master: pushes all new commits to github
