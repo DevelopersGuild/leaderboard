@@ -4,7 +4,9 @@ var express = require('express'),
     util = require('util'),
     fs = require('fs'),
     nodeStatic = require('node-static'),
-    file = new nodeStatic.Server('./public')
+    file = new nodeStatic.Server('./public'),
+    mongodb = require('mongodb'),
+    mongoose = require('mongoose')
 
 
     process.env.NODE_ENV = "development";
@@ -32,7 +34,7 @@ var app = express(),
 
 app.get('*', function(req, res) {
 
-    file.serve(req, res);
+    // file.serve(req, res);
 
      res.send('hello world');
 
