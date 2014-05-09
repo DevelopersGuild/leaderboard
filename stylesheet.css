@@ -1,8 +1,30 @@
+.loginSearchBar
+{
+  border:1px solid;
+  width: 1100px;
+  height:30px;
+  margin: auto;
+}
+
+.topbutton
+{
+  border:1px solid;
+  border-radius: 2px;
+  display: inline-block;
+  float: right;
+  height: 30px;
+  width: 60px;
+  font-family: Verdana;
+  font-size: 11px;
+  text-align: center;
+}
+
 .mainContainer
 {
-  border: 1px solid white; 
+  border: 1px solid orange; 
   border-radius:5px;
-  
+  width: 1100px;
+  margin: auto;
   
 }
 
@@ -18,7 +40,7 @@
 .leaderBoard
 {
 	border-radius: 5px;
-	border: 2px solid none;
+	border: 1px solid;
     height: 200px;
     background-color: #69D2E7;
 }
@@ -26,7 +48,7 @@
 
 .menu
 {
-	border: 1px solid none;
+	border: 1px solid;
 	width: 450px;
 	height: 50px;
     float: right;
@@ -44,7 +66,7 @@
 	display: inline-block;
 	margin-left: 20px;
 	margin-right: 20px;
-	
+	display: inline-block;
 
 }
 
@@ -56,9 +78,29 @@
 	text-align: center;
 }
 
+
+.groupBar
+{
+	border:1px solid;
+    height: 35px;
+
+}
+
+
+.groupbutton
+{
+	border:1px solid;
+    height: 35px;
+    width: 100px;
+    text-align: center;
+    font-family: Verdana;
+    display: inline-block;
+}
+
+
 .topFiveTitle
 {
-	border:1px solid none;
+	border:1px solid;
     height: 50px;
     width: 350px;
     text-align: center;
@@ -106,7 +148,7 @@
 
 .list
 {
-	border: 1px solid none;
+	border: 1px solid;
 	border-radius: 5px;
 	width:380px;
 	height:430px;
@@ -128,7 +170,7 @@
 
 .footer
 {
-  border: 1px solid none;
+  border: 1px solid;
   border-radius: 5px;
   height: 600px;
   margin-top: 1px;
