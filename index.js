@@ -9,6 +9,8 @@ var express = require('express'),
     mongoose = require('mongoose')
 
 
+console.log("hello!");
+
     process.env.NODE_ENV = "development";
 
     var config = {
@@ -22,6 +24,7 @@ var app = express(),
 
 // app.configure("production", function() {
     app.set('port', 22223);
+
 
     // app.use(express.logger('dev'));
 
@@ -37,6 +40,19 @@ app.get('*', function(req, res) {
     // file.serve(req, res);
 
      res.send('hello world');
+
+
+     var obj = {
+     	foo: "bar",
+     	bob: "doe",
+     	sayFoo: function( ) {
+     		console.log(this.foo)
+     	}
+     }
+
+     obj.sayFoo();
+
+     // console.dir(req)
 
     // if (req.url.indexOf('\0') !== -1) {
     //     return respond('That was evil.');
