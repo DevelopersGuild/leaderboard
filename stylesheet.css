@@ -1,9 +1,18 @@
 .loginSearchBar
 {
   border:1px solid;
+  border-radius: 2px;
   width: 1100px;
-  height:30px;
+  height:25px;
   margin: auto;
+}
+
+.search
+{
+  display: inline-block;
+  float: right;
+  margin-right: 1px;
+  margin-top: 1px;
 }
 
 .topbutton
@@ -12,10 +21,10 @@
   border-radius: 2px;
   display: inline-block;
   float: right;
-  height: 30px;
+  height: 25px;
   width: 60px;
   font-family: Verdana;
-  font-size: 11px;
+  font-size: 10px;
   text-align: center;
 }
 
@@ -49,7 +58,7 @@
 .menu
 {
 	border: 1px solid;
-	width: 450px;
+	width: 280px;
 	height: 50px;
     float: right;
     margin-top: 70px;
@@ -59,15 +68,22 @@
 
 .menuButton
 {
-	border: 2px solid #f1f2f2;
+	border: 2px solid white;
 	height:40px;
-	width: 90px;
+	width: 80px;
 	border-radius: 5px;
 	display: inline-block;
-	margin-left: 20px;
-	margin-right: 20px;
+	text-align: center;
+	margin-right: 3px;
+	margin-left: 3px;	
+	margin-top: 3px;
 	display: inline-block;
+	background-color: #69D2E7;
+}
 
+.active
+{
+	background-color: #ABCDEF;
 }
 
 .menuButton p
@@ -75,14 +91,24 @@
 	color: white;
 	font-size:15px;
 	font-family: Verdana;
-	text-align: center;
 }
 
 
 .groupBar
 {
 	border:1px solid;
-    height: 35px;
+    height: 38px;
+    background-color: white;
+
+}
+
+
+.groupbuttonFrame
+{
+	border: 1px solid; 
+	border-radius: 2px;
+    width: 350px;
+    margin: auto;
 
 }
 
@@ -90,11 +116,16 @@
 .groupbutton
 {
 	border:1px solid;
+	border-radius: 2px;
     height: 35px;
     width: 100px;
     text-align: center;
     font-family: Verdana;
+    font-size: 13px;
     display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+    background-color: #4ECDC4;
 }
 
 
@@ -111,14 +142,13 @@
 
 .topFiveTitle p
 {
-	
 	color: black;
 	font-size: 18px;
 	font-family: Verdana;
 }
 .leaderList
 {
-	border: 1px solid #f1f2f2;
+	border: 1px solid;
 	border-radius:5px;
 	background-color: #f1f2f2;
 	height: 350px;
@@ -140,40 +170,76 @@
 
 .topFiveFrame 
 {
-	border: 1px solid #A7DBD8;
+	border: 1px solid;
 	width: 910px;
 	margin: auto;
 	margin-top: 5px;
 }
 
-.list
+.listframe
 {
 	border: 1px solid;
-	border-radius: 5px;
-	width:380px;
-	height:430px;
+	border-radius: 2px;
+	width: 600px;
+	height: 650px;
 	margin: auto;
-	margin-top: 1px;
-	text-align: center;
-	font-size: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+
 }
 
 
-.list li
+.listBar
 {
-	color: #646d72;
-	margin-top: 10px;
-	font-size:20px;
+	border: 1px solid;
+	border-radius: 2px;
+	height: 55px;
+	width: 530px;
+	font-size: 15px;
 	font-family: Verdana;
+	padding-right: 3px;
+	padding-left: 3px;
+    padding-top: 3px;
 }
 
+.icon
+{
+	border: 2px solid #69D2E7;
+	border-radius: 100px;
+	height: 50px;
+	width: 50px;
+	margin-left: 10px;
+
+}
 
 .footer
 {
   border: 1px solid;
   border-radius: 5px;
-  height: 600px;
+  height: 200px;
   margin-top: 1px;
   background-color: #A7DBD8;
+
+}
+
+
+.footRight
+{
+	border: 1px solid;
+	float: right;
+	height: 80px;
+	width: 300px;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.link
+{
+  border: 2px solid;
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  background-color: #fff;
 
 }
