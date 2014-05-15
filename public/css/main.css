@@ -1,7 +1,22 @@
 @import url("buttons.css");
 
-.loginSearchBar
-{
+/*//////////////////////////////////////////////////////////////////*/
+		/* MAIN CSS */
+/*//////////////////////////////////////////////////////////////////*/
+
+.mainContainer {
+  border: 1px solid orange; 
+  border-radius:5px;
+  width: 1100px;
+  margin: auto;
+  
+}
+
+/*//////////////////////////////////////////////////////////////////*/
+		/* SEARCHBAR LOGIN BTN CSS */
+/*//////////////////////////////////////////////////////////////////*/
+
+.loginSearchBar {
   border:1px solid;
   border-radius: 2px;
   width: 1100px;
@@ -9,16 +24,14 @@
   margin: auto;
 }
 
-.search
-{
+.search {
   display: inline-block;
   float: right;
   margin-right: 1px;
   margin-top: 1px;
 }
 
-.topbutton
-{
+.topbutton {
   border:1px solid;
   border-radius: 2px;
   display: inline-block;
@@ -30,17 +43,11 @@
   text-align: center;
 }
 
-.mainContainer
-{
-  border: 1px solid orange; 
-  border-radius:5px;
-  width: 1100px;
-  margin: auto;
-  
-}
-
-.leaderBoard img
-{
+/*//////////////////////////////////////////////////////////////////*/
+		/* TITLE AND LOGO CSS */
+/*//////////////////////////////////////////////////////////////////*/
+	
+.leaderBoard img {
 	height: 100px;
 	float: left;
 	margin-top: 50px;
@@ -48,17 +55,14 @@
 
 }
 
-.leaderBoard
-{
+.leaderBoard {
 	border-radius: 5px;
 	border: 1px solid;
     height: 200px;
     background-color: #69D2E7;
 }
 
-
-.menu
-{
+.menu {
 	border: 1px solid;
 	width: 280px;
 	height: 50px;
@@ -68,8 +72,7 @@
 
 }
 
-.menuButton
-{
+.menuButton {
 	border: 2px solid white;
 	height:40px;
 	width: 80px;
@@ -83,19 +86,134 @@
 	background-color: #69D2E7;
 }
 
-.active
-{
-	background-color: #ABCDEF;
-}
-
-.menuButton p
-{
+.menuButton p {
 	color: white;
 	font-size:15px;
 	font-family: Verdana;
 }
 
+/*//////////////////////////////////////////////////////////////////*/
+		/* LB LEADERS CSS */
+/*//////////////////////////////////////////////////////////////////*/
 
+.topFiveTitle {
+	border:1px solid;
+    height: 50px;
+    width: 350px;
+    text-align: center;
+    margin: auto;
+    margin-top: 60px;
+    
+}
+
+.topFiveTitle p {
+	color: black;
+	font-size: 18px;
+	font-family: Verdana;
+}
+
+.leaderList {
+	border: 1px solid;
+	border-radius:5px;
+	background-color: #f1f2f2;
+	height: 350px;
+}
+
+.avatar {
+	border:3px solid #69D2E7;
+	border-radius: 100px;
+	height: 150px;
+	width: 150px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin: center;
+
+}
+
+.topFiveFrame {
+	border: 1px solid;
+	width: 910px;
+	margin: auto;
+	margin-top: 5px;
+}
+
+/*//////////////////////////////////////////////////////////////////*/
+		/* LEADERBOARD LIST CSS */
+/*//////////////////////////////////////////////////////////////////*/
+
+.listframe {
+	border: 1px solid;
+	border-radius: 2px;
+	width: 600px;
+	height: 650px;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+}
+
+
+.listBar {
+	border: 1px solid;
+	border-radius: 2px;
+	height: 55px;
+	width: 530px;
+	font-size: 15px;
+	font-family: Verdana;
+	padding-right: 3px;
+	padding-left: 3px;
+    padding-top: 3px;
+}
+
+.icon {
+	border: 2px solid #69D2E7;
+	border-radius: 100px;
+	height: 50px;
+	width: 50px;
+	margin-left: 10px;
+
+}
+
+/*//////////////////////////////////////////////////////////////////*/
+		/* FOOTER CSS */
+/*//////////////////////////////////////////////////////////////////*/
+
+.footer {
+  border: 1px solid;
+  border-radius: 5px;
+  height: 200px;
+  margin-top: 1px;
+  background-color: #A7DBD8;
+
+}
+
+
+.footRight {
+	border: 1px solid;
+	float: right;
+	height: 80px;
+	width: 300px;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.link {
+  border: 2px solid;
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  background-color: #fff;
+
+}
+
+/*//////////////////////////////////////////////////////////////////*/
+		/* NVABAR CSS */
+/*//////////////////////////////////////////////////////////////////*/
+
+/*
 .groupBar
 {
 	border:1px solid;
@@ -128,121 +246,23 @@
     margin-right: 5px;
     margin-left: 5px;
     background-color: #4ECDC4;
-}
+} */
 
+/*//////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////*/
 
-.topFiveTitle
+.active
 {
-	border:1px solid;
-    height: 50px;
-    width: 350px;
-    text-align: center;
-    margin: auto;
-    margin-top: 60px;
-    
-}
-
-.topFiveTitle p
-{
-	color: black;
-	font-size: 18px;
-	font-family: Verdana;
-}
-.leaderList
-{
-	border: 1px solid;
-	border-radius:5px;
-	background-color: #f1f2f2;
-	height: 350px;
-}
-
-.avatar
-{
-	border:3px solid #69D2E7;
-	border-radius: 100px;
-	height: 150px;
-	width: 150px;
-    display: inline-block;
-    margin-left: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin: center;
-
-}
-
-.topFiveFrame 
-{
-	border: 1px solid;
-	width: 910px;
-	margin: auto;
-	margin-top: 5px;
-}
-
-.listframe
-{
-	border: 1px solid;
-	border-radius: 2px;
-	width: 600px;
-	height: 650px;
-	margin: auto;
-	margin-top: 30px;
-	margin-bottom: 30px;
-
+	background-color: #ABCDEF;
 }
 
 
-.listBar
-{
-	border: 1px solid;
-	border-radius: 2px;
-	height: 55px;
-	width: 530px;
-	font-size: 15px;
-	font-family: Verdana;
-	padding-right: 3px;
-	padding-left: 3px;
-    padding-top: 3px;
-}
-
-.icon
-{
-	border: 2px solid #69D2E7;
-	border-radius: 100px;
-	height: 50px;
-	width: 50px;
-	margin-left: 10px;
-
-}
-
-.footer
-{
-  border: 1px solid;
-  border-radius: 5px;
-  height: 200px;
-  margin-top: 1px;
-  background-color: #A7DBD8;
-
-}
 
 
-.footRight
-{
-	border: 1px solid;
-	float: right;
-	height: 80px;
-	width: 300px;
-	margin-right: 20px;
-	margin-top: 20px;
-}
 
-.link
-{
-  border: 2px solid;
-  border-radius: 100px;
-  height: 30px;
-  width: 30px;
-  text-align: center;
-  background-color: #fff;
 
-}
+
+
+
+
 
