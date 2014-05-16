@@ -6,8 +6,8 @@ var express = require('express'),
     nodeStatic = require('node-static'),
     file = new nodeStatic.Server('./public'),
     mongodb = require('mongodb'),
-    mongoose = require('mongoose')
-
+    mongoose = require('mongoose'),
+    bodyParser = require('body-parser'); // for app.post
 
 console.log("hello!");
 
@@ -20,7 +20,7 @@ console.log("hello!");
     }
 
 var app = express(),
-    publicDir = path.join(__dirname, config.fs.publicDir)
+    publicDir = path.join(__dirname, config.fs.publicDir);
 
 // app.configure("production", function() {
     app.set('port', 22223);
@@ -34,8 +34,10 @@ var app = express(),
     // app.use(express.static(clientDir)); //should cache static assets
 // });
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
 
-app.get('*', function(req, res) {
+app.get('/', function(req, res) {
 
     // file.serve(req, res);
 
@@ -66,6 +68,16 @@ app.get('*', function(req, res) {
     //         res.send('404');
     //     }
     // });
+});
+
+app.get('/login', function(req, res) {
+    res.sendfile(path.join(publicDir, '/login.html'));
+});
+
+app.post('/login', function(req, res) {
+    var username = req.body.username,
+        password = req.body.password;
+    res.send('Post received - Username: ' + username + ' Password: ' + password);
 });
 
 var server = app.listen(app.get('port'), function() {

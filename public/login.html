@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <style type="text/css">
+            body
+            {
+             background-color: gray;
+            }
+            table
+            {
+             margin-left: auto;
+             margin-right: auto;
+            }
+            td.left
+            {
+             align: left;
+            }
+            td.right
+            {
+             align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/login" method="post" id="form">
+            <table cellspacing="15">
+                <tr>
+                    <td class="left">
+                        Username:
+                    </td>
+                    <td class="right">
+                        <input type="text" name="username" value="uname" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        Password:
+                    </td>
+                    <td class="right">
+                        <input type="password" name="password" value="pass" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <br />
+                        <button type="submit">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
