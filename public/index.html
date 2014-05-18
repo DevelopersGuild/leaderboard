@@ -4,7 +4,8 @@
   <title>Developers' Guild LeaderBoard</title>
 
    <link rel="stylesheet" type="text/css" href="css/main.css"> 
-   <script type="text/javascript" src="js/script.js"></script>
+   <script type="text/javascript" src="public/js/script.js"></script>
+   <script type="text/javascript" src="jqueryLibs/jquery-ui-1.10.4.min.js"></script> 
 
    <!-- asdf -->
    <!-- Linking Jquery Libraries from Google -->
@@ -21,42 +22,40 @@
 
 <!--Add your name in a <h1></h1> or <p></p> tag and then add, commit and push to git-->
 
-<div class="loginSearchBar">
+<div class="mainContainer">
 
-  <div class="topbutton"><p>Login</p></div>
+  
+  <div class="loginSearchBar">
 
-  <div class="topbutton"><p>Search</p></div>  
+  <button class="topbutton"><p>Login</p></button>
+
+  <button class="topbutton"><p>Search</p></button>
 
   <form class="search">
-    <input type-"text" name="search"/>
+    <input type-"text" name="search" placeholder="Search"/>
   </form>
 
 </div>
 
 
-<div class="mainContainer">
-
   <div class="leaderBoard"> 
           
-          <a href="file:///Users/brucelin/leaderboard/index.html">
-          <img src="http://gallery.mailchimp.com/6acb655ab23e35d5f8d38b813/images/logo_std.2.png"></img> 
-         </a>
-         
-         <div class="menu">  
-           <div class="menuButton"><p>About Us</p></div>
-           <div class="menuButton"><p>News</p></div>
-           <div class="menuButton"><p>Join Us</p></div>
+
+          <div class="logoContainer">
+            <a href="file:///Users/brucelin/leaderboard/index.html">
+            <img src="http://gallery.mailchimp.com/6acb655ab23e35d5f8d38b813/images/logo_std.2.png"></img> 
+            </a>
+          </div>
+         <!--<div class="menu">  
+           <button class="menuButton"><p>About Us</p></button>
+           <button class="menuButton"><p>News</p></button>
+           <button class="menuButton"><p>Join Us</p></button>
          </div>
+         -->
 
   </div>
   
-    <div class="groupBar">
-        <div class="groupbuttonFrame">
-           <div class="groupbutton"><p>Web App</p></div>
-           <div class="groupbutton"><p>Mobile</p></div>
-           <div class="groupbutton"><p>Game</p></div>
-         </div>  
-    </div>
+    
 
   <div class="leaderList">
        
@@ -80,66 +79,216 @@
        <ol>
 
           <div class="listBar">
-           <div class="icon"></div>
+           
+
+             <div class="listContent">
+               <div class="icon"></div>
+
+                 <div class="nameContainer">
+                   <div class="name"></div>
+                 </div>
+             </div>
+            
+             <div class="listContent"> 
+               <div class="exbar"></div>
+             </div>
+
+             <div class="listContent"> 
+               <div class="info"><p></p></div>
+             </div>
+
           
           </div>
 
           <div class="listBar">
-           <div class="icon"></div>
            
-           </div>
 
-          <div class="listBar"> 
-           <div class="icon"></div>
-           </div>
+             <div class="listContent">
+                <div class="icon"></div>
+
+                 <div class="nameContainer">
+                   <div class="name"></div>
+                 </div>
+             </div>
+            
+             <div class="listContent"> 
+               <div class="exbar"></div>
+             </div>
+
+             <div class="listContent"> 
+               <div class="info"></div>
+             </div>
+
+         </div>    
+
 
           <div class="listBar">
-           <div class="icon"></div>
+           
+
+             <div class="listContent">
+               <div class="icon"></div>
+
+                <div class="nameContainer">
+                   <div class="name"></div>
+                 </div>
+             </div>
+            
+             <div class="listContent"> 
+               <div class="exbar"></div>
+             </div>
+
+             <div class="listContent"> 
+               <div class="info"></div>
+             </div>
+
+         </div>    
+
+          <div class="listBar">
+           
+
+             <div class="listContent">
+               <div class="icon"></div>
+
+                <div class="nameContainer">
+                   <div class="name"></div>
+                 </div>
+             </div>
+            
+             <div class="listContent"> 
+               <div class="exbar"></div>
+             </div>
+
+             <div class="listContent"> 
+               <div class="info"></div>
+             </div>
+
           
           </div>
 
           <div class="listBar">
-           <div class="icon"></div>
+           
+
+             <div class="listContent">
+               <div class="icon"></div>
+
+                <div class="nameContainer">
+                   <div class="name"></div>
+                 </div>
+             </div>
+            
+             <div class="listContent"> 
+               <div class="exbar"></div>
+             </div>
+
+             <div class="listContent"> 
+               <div class="info"></div>
+             </div>
+
           
           </div>
 
           <div class="listBar">
-           <div class="icon"></div>
            
+
+             <div class="listContent">
+               <div class="icon"></div>
+
+                <div class="nameContainer">
+                   <div class="name"></div>
+                 </div>
+             </div>
+            
+             <div class="listContent"> 
+               <div class="exbar"></div>
+             </div>
+
+             <div class="listContent"> 
+               <div class="info"></div>
+             </div>
+
+          
           </div>
 
-          <div class="listBar">
-           <div class="icon"></div>
+         <div class="listBar">
            
+
+             <div class="listContent">
+               <div class="icon"></div>
+
+                <div class="nameContainer">
+                   <div class="name"></div>
+                 </div>
+             </div>
+            
+             <div class="listContent"> 
+               <div class="exbar"></div>
+             </div>
+
+             <div class="listContent"> 
+               <div class="info"></div>
+             </div>
+
+          
+         <div class="listBar">
+           
+
+             <div class="listContent">
+               <div class="icon"></div>
+
+                <div class="nameContainer">
+                   <div class="name"></div>
+                 </div>
+             </div>
+            
+             <div class="listContent"> 
+               <div class="exbar"></div>
+             </div>
+
+             <div class="listContent"> 
+               <div class="info"></div>
+             </div>
+
+          
           </div>
 
-          <div class="listBar">
-           <div class="icon"></div>
-           
-          </div>
 
-          <div class="listBar">
-           <div class="icon"></div>
+         <div class="listBar">
            
-          </div>
 
-          <div class="listBar">
-           <div class="icon"></div>
+             <div class="listContent">
+               <div class="icon"></div>
+
+                <div class="nameContainer">
+                   <div class="name"></div>
+                 </div>
+             </div>
+            
+             <div class="listContent"> 
+               <div class="exbar"></div>
+             </div>
+
+             <div class="listContent"> 
+               <div class="info"></div>
+             </div>
+
           
           </div>
 
        </ol>
   </div>
+
   
   <div class="footer">
 
-    <div class="footRight">
-    
-    <div class="link">
-      <a class="icon facebook" href="https://www.facebook.com/dadevelopersguild"></a>
+        <div class="groupbuttonFrame">
+           <button class="groupbutton"><p>Web App</p></button>
+           <button class="groupbutton"><p>Mobile</p></button>
+           <button class="groupbutton"><p>Game</p></button>
+        </div>  
+
     </div>
       
-    </div>
+  </div>
 
   </div>
 
