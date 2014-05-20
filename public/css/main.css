@@ -36,15 +36,15 @@
   float: right;
   height: 25px;
   width: 60px;
-  font-family: Verdana;
-  font-size: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
   text-align: center;
-  background: #1abc9c;
-  color: white;
+  background: white;
+  color: black;
 }
 
 .topbutton p {
-	margin-top: 3px;
+	margin-top: 5px;
 }
 
 /*//////////////////////////////////////////////////////////////////*/
@@ -110,7 +110,7 @@
 .topFiveTitle {
 	border:1px solid;
     height: 50px;
-    width: 350px;
+    width: 250px;
     text-align: center;
     margin: auto;
     margin-top: 30px;
@@ -120,7 +120,7 @@
 .topFiveTitle p {
 	color: black;
 	font-size: 18px;
-	font-family: Verdana;
+	font-family: 'Raleway', sans-serif;
 }
 
 .leaderList {
@@ -170,7 +170,7 @@
 	height: 55px;
 	width: 920px;
 	font-size: 15px;
-	font-family: Verdana;
+	font-family: 'Raleway', sans-serif;
     margin: auto;
 }
 
@@ -179,26 +179,27 @@
 	border: 1px solid red;
 	height: 55px;
 	width: 300px;
-	margin: auto;
 	display: inline-block;
+
 }
 
 
 .icon {
 	border: 2px solid #69D2E7;
-	border-radius: 100px;
+	border-radius: 5px;
 	height: 50px;
 	width: 50px;
 	margin-left: 10px;
-
-
+	position: absolute;
+    
 }
 
 .nameContainer {
-	border: 1px solid;
+	border: 1px solid blue;
 	height: 55px;
-	width: 170px;
-	margin-left: 70px;
+	width: 150px;
+    position: relative;
+    margin-left: 80px;
 }
 
 
@@ -307,24 +308,28 @@
     height: 35px;
     width: 100px;
     text-align: center;
-    font-family: Verdana;
+    font-family: 'Raleway', sans-serif;
     font-size: 13px;
     display: inline-block;
     margin-right: 5px;
     margin-left: 5px;
-    background-color: #4ECDC4;
+    background-color: #c0392b;
 }
 
 .groupbutton p {
-	margin-top: 3px;
+	margin-top: 6px;
 }
 
-.active
-{
-	background-color: #ABCDEF;
+.active{
+
+   background-color: #1abc9c;
 }
 
+.active1{
+   
+   background-color: #e74c3c;
 
+}
 
 
 
