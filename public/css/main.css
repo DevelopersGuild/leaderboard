@@ -39,12 +39,12 @@
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
   text-align: center;
-  background: white;
-  color: black;
+  background-color: #E74C3C;
 }
 
 .topbutton p {
 	margin-top: 5px;
+	color: white;
 }
 
 /*//////////////////////////////////////////////////////////////////*/
@@ -113,12 +113,13 @@
     width: 250px;
     text-align: center;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 15px;
+    background-color: #34495E
     
 }
 
 .topFiveTitle p {
-	color: black;
+	color: white;
 	font-size: 18px;
 	font-family: 'Raleway', sans-serif;
 }
@@ -131,7 +132,7 @@
 }
 
 .avatar {
-	border:3px solid #69D2E7;
+	border:1px solid #69D2E7;
 	border-radius: 100px;
 	height: 150px;
 	width: 150px;
@@ -237,9 +238,9 @@
 .footer {
   border: 1px solid;
   border-radius: 5px;
-  height: 200px;
+  height: 150px;
   margin-top: 1px;
-  background-color: #A7DBD8;
+  background-color: #2c3e50;
 
 }
 
@@ -303,26 +304,27 @@
 
 .groupbutton
 {
-	
-	border-radius: 10px;
+	border: 1px solid;
+	border-radius: 1px;
     height: 35px;
     width: 100px;
     text-align: center;
     font-family: 'Raleway', sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     display: inline-block;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 2px;
+    margin-left: 2px;
     background-color: #c0392b;
 }
 
 .groupbutton p {
-	margin-top: 6px;
+	color: white;
+	margin-top: 10px;
 }
 
 .active{
 
-   background-color: #1abc9c;
+   background-color: #cc0000;
 }
 
 .active1{
