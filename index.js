@@ -9,6 +9,36 @@ var express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'); // for app.post
 
+
+
+
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/leaderboard');
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function callback () {
+
+
+  // var user = new models.Users({
+  //   email: 'test'+Math.floor(Math.random()*1000)+'@test.com',
+  //   name : {
+  //     first: 'bob',
+  //     last : 'doe'
+  //   }
+  // });
+
+  // user.save(function (err, user) {
+  //   if (err) return console.error(err);
+  //   console.dir(user)
+  // });
+});
+
+  var models = require('./app/models/model')(mongoose);
+
+
+
 console.log("hello!");
 
     process.env.NODE_ENV = "development";
@@ -77,8 +107,33 @@ app.get('/login', function(req, res) {
 app.post('/login', function(req, res) {
     var username = req.body.username,
         password = req.body.password;
-    res.send('Post received - Username: ' + username + ' Password: ' + password);
+    res.send('Post received - Username: ' + username + ' Password: ' + password + ' Hashed Password: ' + 'hashedPassword');
 });
+
+app.get('/register', function(req, res) {
+    res.sendfile(path.join(publicDir, '/register.html'));
+});
+
+app.post('/register', function(req, res) {
+
+
+  var email = req.body.email,
+      password = req.body.password;
+
+  var user = new models.Users({
+    email: email,
+    password: password
+  });
+
+  user.save(function (err, user) {
+    if (err) return console.error(err);
+    console.dir(user)
+  });
+
+
+    res.send('Post received - Email: ' + email + ' Password: ' + password + ' Hashed Password: ' + 'hashedPassword');
+});
+
 
 var server = app.listen(app.get('port'), function() {
     console.log("\nNode.js server listening on port " + (app.get('port')))
