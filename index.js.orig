@@ -9,10 +9,13 @@ var express = require('express'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'); // for app.post
 <<<<<<< HEAD
+<<<<<<< HEAD
     crypto = require('crypto');
+=======
 =======
     crypto = require('crypto'); //Module for Hashing
     hasher = crypto.createHash('sha1');//Algorithm for hashing completely arbitrary
+>>>>>>> 11d8977f701f623e45b45597258ff269a0b25ec7
 
 
 
