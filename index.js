@@ -8,7 +8,7 @@ var express = require('express'),
     mongodb = require('mongodb'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'); // for app.post
-
+    crypto = require('crypto');
 console.log("hello!");
 
     process.env.NODE_ENV = "development";
@@ -75,9 +75,12 @@ app.get('/login', function(req, res) {
 });
 
 app.post('/login', function(req, res) {
+    //res.writeHead(200,{'Content-Encoding':'utf-8'});
     var username = req.body.username,
         password = req.body.password;
-    res.send('Post received - Username: ' + username + ' Password: ' + password);
+    var hashedPassword = crypto.pbkdf2Sync(password,"DevelopersGuildTheSalt",999,16) ;
+    res.send('Post received - Username: ' + username + ' Password: ' + password + ' Hashed Password: ' + Buffer(hashedPassword, 'binary').toString('hex'));
+	
 });
 
 var server = app.listen(app.get('port'), function() {
