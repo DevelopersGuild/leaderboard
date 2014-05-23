@@ -8,9 +8,6 @@ var express = require('express'),
     mongodb = require('mongodb'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'); // for app.post
-<<<<<<< HEAD
-    crypto = require('crypto');
-=======
     crypto = require('crypto'); //Module for Hashing
     hasher = crypto.createHash('sha1');//Algorithm for hashing completely arbitrary
 
@@ -44,7 +41,6 @@ db.once('open', function callback () {
 
 
 
->>>>>>> 1cc63c72db73f1e87afde4fdcd0a08d7d8fe3f30
 console.log("hello!");
 
     process.env.NODE_ENV = "development";
@@ -114,12 +110,9 @@ app.post('/login', function(req, res) {
     //res.writeHead(200,{'Content-Encoding':'utf-8'});
     var username = req.body.username,
         password = req.body.password;
-<<<<<<< HEAD
     var hashedPassword = crypto.pbkdf2Sync(password,"DevelopersGuildTheSalt",999,16) ;
     res.send('Post received - Username: ' + username + ' Password: ' + password + ' Hashed Password: ' + Buffer(hashedPassword, 'binary').toString('hex'));
 	
-=======
-    res.send('Post received - Username: ' + username + ' Password: ' + password + ' Hashed Password: ' + 'hashedPassword');
 });
 
 app.get('/register', function(req, res) {
@@ -144,7 +137,6 @@ app.post('/register', function(req, res) {
 
 
     res.send('Post received - Email: ' + email + ' Password: ' + password + ' Hashed Password: ' + 'hashedPassword');
->>>>>>> 1cc63c72db73f1e87afde4fdcd0a08d7d8fe3f30
 });
 
 
