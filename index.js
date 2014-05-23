@@ -123,11 +123,12 @@ app.post('/register', function(req, res) {
 
 
   var email = req.body.email,
-      password = req.body.password;
+      password = req.body.password,
+      hashedPassword = crypto.pbkdf2Sync(password,"DevelopersGuildTheSalt",999,16)
 
   var user = new models.Users({
     email: email,
-    password: password
+    password: hashedPassword
   });
 
   user.save(function (err, user) {
