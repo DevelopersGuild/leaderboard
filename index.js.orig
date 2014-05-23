@@ -109,8 +109,15 @@ app.get('/login', function(req, res) {
 app.post('/login', function(req, res) {
     var username = req.body.username,
         password = req.body.password;
-        salt = "lel";
-        hashedPassword = crypto.pbkdf2Sync(password, salt, 10000, 512);
+<<<<<<< HEAD
+
+        //Hashing Stuff
+        salt = crypto.randomBytes(128).toString('base64');
+        hash = crypto.pbkdf2Sync(password, salt, 10000, 512);
+        //Hashing stuff
+
+    res.send('Post received - Username: ' + username + ' Password: ' + password + 'hash ' + hash);
+=======
     res.send('Post received - Username: ' + username + ' Password: ' + password + ' Hashed Password: ' + 'hashedPassword');
 });
 
@@ -135,7 +142,8 @@ app.post('/register', function(req, res) {
   });
 
 
-    res.send('Post received - Email: ' + email + ' Password: ' + password + ' Hashed Password: ' + hashedPassword);
+    res.send('Post received - Email: ' + email + ' Password: ' + password + ' Hashed Password: ' + 'hashedPassword');
+>>>>>>> 1cc63c72db73f1e87afde4fdcd0a08d7d8fe3f30
 });
 
 
