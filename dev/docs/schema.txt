@@ -3,6 +3,6 @@ var user = {
     firstName: $firstName,
     lastName: $lastName,
     password: $password,
-    id: $id, //1, 2, 3
+    id: $id
     
 }
