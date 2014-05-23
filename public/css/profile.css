@@ -1,0 +1,128 @@
+/*//////////////////////////////////////////////////////////////////*/
+		/* PROFILE CSS */
+/*//////////////////////////////////////////////////////////////////*/
+
+.mainContainer{
+	border: 1px solid orange;
+	width: 1100px;
+	height: 1500px;
+	margin: auto;
+
+}
+
+.banner{
+	border: 1px solid;
+	width: 1100px;
+	height: 25px;
+}
+
+.topbutton {
+  border-radius: 1px;
+  float: right;
+  height: 25px;
+  width: 60px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  background-color: #E74C3C;
+}
+
+.topbutton p {
+  margin-top: 5px;	 
+  color: white;
+}
+
+.search {
+  display: inline-block;
+  float: right;
+  margin-right: 1px;
+  margin-top: 1px;
+}
+
+
+.profile_frame{
+	border: 1px solid green;
+    width: 1100px;
+    height: 360px;
+} 
+
+
+.info{
+	border: 1px solid;
+	width: 160px;
+	height: 230px;
+	margin-top: 70px;
+	margin-left: 50px;
+	position: absolute;
+}
+
+.avatar{
+	border: 2px solid;
+	border-radius: 5px;
+	width: 150px;
+	height: 150px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+
+.name{
+	border: 2px solid blue;
+	border-radius: 5px;
+	width: 150px;
+	height: 30px;
+	margin: auto;
+	margin-top: 10px;
+
+}
+
+.bio{
+	border: 2px solid red;
+	border-radius: 5px;
+	width: 800px;
+	height: 300px;
+    margin-left: 250px;
+    margin-top: 30px;
+	position: relative;
+	
+}
+
+
+.achiev_frame{
+    border: 1px solid;
+    width: 800px;
+    height: 660px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.achieve_bar{
+	border: 1px solid red;
+    width: 800px;
+    height: 70px;
+}
+
+
+.comment{
+	border: 1px solid blue;
+	width: 900px;
+	height: 300px;
+	margin: auto;
+	margin-top: 10px;
+}
+
+
+
+.footer{
+	border: 1px solid grey;
+	width: 1100px;
+	height: 100px;
+	margin-top: 15px;
+}
+
+
+
+.active{
+
+   background-color: #cc0000;
+}
