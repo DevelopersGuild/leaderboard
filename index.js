@@ -8,7 +8,41 @@ var express = require('express'),
     mongodb = require('mongodb'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'); // for app.post
+<<<<<<< HEAD
     crypto = require('crypto');
+=======
+
+
+
+
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/leaderboard');
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function callback () {
+
+
+  // var user = new models.Users({
+  //   email: 'test'+Math.floor(Math.random()*1000)+'@test.com',
+  //   name : {
+  //     first: 'bob',
+  //     last : 'doe'
+  //   }
+  // });
+
+  // user.save(function (err, user) {
+  //   if (err) return console.error(err);
+  //   console.dir(user)
+  // });
+});
+
+  var models = require('./app/models/model')(mongoose);
+
+
+
+>>>>>>> 1cc63c72db73f1e87afde4fdcd0a08d7d8fe3f30
 console.log("hello!");
 
     process.env.NODE_ENV = "development";
@@ -78,10 +112,39 @@ app.post('/login', function(req, res) {
     //res.writeHead(200,{'Content-Encoding':'utf-8'});
     var username = req.body.username,
         password = req.body.password;
+<<<<<<< HEAD
     var hashedPassword = crypto.pbkdf2Sync(password,"DevelopersGuildTheSalt",999,16) ;
     res.send('Post received - Username: ' + username + ' Password: ' + password + ' Hashed Password: ' + Buffer(hashedPassword, 'binary').toString('hex'));
 	
+=======
+    res.send('Post received - Username: ' + username + ' Password: ' + password + ' Hashed Password: ' + 'hashedPassword');
 });
+
+app.get('/register', function(req, res) {
+    res.sendfile(path.join(publicDir, '/register.html'));
+});
+
+app.post('/register', function(req, res) {
+
+
+  var email = req.body.email,
+      password = req.body.password;
+
+  var user = new models.Users({
+    email: email,
+    password: password
+  });
+
+  user.save(function (err, user) {
+    if (err) return console.error(err);
+    console.dir(user)
+  });
+
+
+    res.send('Post received - Email: ' + email + ' Password: ' + password + ' Hashed Password: ' + 'hashedPassword');
+>>>>>>> 1cc63c72db73f1e87afde4fdcd0a08d7d8fe3f30
+});
+
 
 var server = app.listen(app.get('port'), function() {
     console.log("\nNode.js server listening on port " + (app.get('port')))
