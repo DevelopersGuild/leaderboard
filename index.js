@@ -8,6 +8,8 @@ var express = require('express'),
     mongodb = require('mongodb'),
     mongoose = require('mongoose'),
     bodyParser = require('body-parser'); // for app.post
+    crypto = require('crypto'); //Module for Hashing
+    hasher = crypto.createHash('sha1');//Algorithm for hashing completely arbitrary
 
 console.log("hello!");
 
@@ -77,7 +79,13 @@ app.get('/login', function(req, res) {
 app.post('/login', function(req, res) {
     var username = req.body.username,
         password = req.body.password;
-    res.send('Post received - Username: ' + username + ' Password: ' + password);
+
+        //Hashing Stuff
+        salt = crypto.randomBytes(128).toString('base64');
+        hash = crypto.pbkdf2Sync(password, salt, 10000, 512);
+        //Hashing stuff
+
+    res.send('Post received - Username: ' + username + ' Password: ' + password + 'hash ' + hash);
 });
 
 var server = app.listen(app.get('port'), function() {
