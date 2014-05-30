@@ -108,10 +108,26 @@ app.get('/login', function(req, res) {
 
 app.post('/login', function(req, res) {
     //res.writeHead(200,{'Content-Encoding':'utf-8'});
-    var username = req.body.username,
+    var username = req.body.email,
         password = req.body.password;
     var hashedPassword = crypto.pbkdf2Sync(password,"DevelopersGuildTheSalt",999,16) ;
-    res.send('Post received - Username: ' + username + ' Password: ' + password + ' Hashed Password: ' + Buffer(hashedPassword, 'binary').toString('hex'));
+    var theUser;
+    var err;
+    models.Users.findOne({email: username}, function(err, theUser){
+    console.log(hashedPassword+"       ");
+    console.log(theUser.password);
+    if(err){console.log(err);}
+	if(theUser){
+	if(theUser.password == hashedPassword){
+res.send("Login Successful!  ")	;	
+res.send('Post received - Username: ' + username + ' Password: ' + password + ' Hashed Password: ' + Buffer(hashedPassword, 'binary').toString('hex'));
+	}else{
+		res.send("Password Incorrect!");
+	}
+    }
+    else
+	res.send("User Not Found");
+});
 	
 });
 
@@ -136,11 +152,10 @@ app.post('/register', function(req, res) {
     console.dir(user)
   });
 
-
     res.send('Post received - Email: ' + email + ' Password: ' + password + ' Hashed Password: ' + hashedPassword);
 });
 
-
 var server = app.listen(app.get('port'), function() {
     console.log("\nNode.js server listening on port " + (app.get('port')))
+
 })
