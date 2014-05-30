@@ -114,19 +114,18 @@ app.post('/login', function(req, res) {
     var theUser;
     var err;
     models.Users.findOne({email: username}, function(err, theUser){
-    console.log(hashedPassword+"       ");
-    console.log(theUser.password);
     if(err){console.log(err);}
-	if(theUser){
+	if(theUser != null){
 	if(theUser.password == hashedPassword){
 res.send("Login Successful!  ")	;	
-res.send('Post received - Username: ' + username + ' Password: ' + password + ' Hashed Password: ' + Buffer(hashedPassword, 'binary').toString('hex'));
+//res.send('Post received - Username: ' + username + ' Password: ' + password + ' Hashed Password: ' + Buffer(hashedPassword, 'binary').toString('hex'));
 	}else{
 		res.send("Password Incorrect!");
 	}
     }
-    else
+    else{
 	res.send("User Not Found");
+	}
 });
 	
 });
