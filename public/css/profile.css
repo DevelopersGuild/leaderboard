@@ -1,0 +1,154 @@
+/*//////////////////////////////////////////////////////////////////*/
+		/* PROFILE CSS */
+/*//////////////////////////////////////////////////////////////////*/
+
+.mainContainer{
+	border: 1px solid orange;
+	width: 1100px;
+	height: 1500px;
+	margin: auto;
+	background-color: #ecf0f1
+
+}
+
+.banner{
+	border: 1px solid;
+	height: 50px;
+	background-color: #1abc9c;
+	list-style: none;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.topbutton {
+  border-radius: 1px;
+  height: 25px;
+  width: 60px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  background-color: #E74C3C;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.topbutton p {
+  margin-top: 5px;	 
+  color: white;
+}
+
+.search {
+  margin-right: 2px;
+  margin-top: 10px;
+  width: 220px;
+  height: 24px;
+  vertical-align: middle;
+  background: transparent;
+  float: right;
+}
+
+.search-text {
+	border: none;
+	width: 190px;
+	height: 18px;
+	background-image: url(https://d13yacurqjgara.cloudfront.net/assets/icon-search-26f72d08a1058cc4ddf5f675bdbe7dda.png);
+	border-radius: 4px;
+	vertical-align: middle;
+	padding: 5px 5px 5px 25px;
+	font-size: 12px;
+	background-repeat: no-repeat;
+	background-position: 7px 50%;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.profile_frame{
+	border: 1px solid green;
+    width: 1100px;
+    height: 360px;
+    background-color: white;
+} 
+
+
+.info{
+	border: 1px solid;
+	width: 160px;
+	height: 230px;
+	margin-top: 70px;
+	margin-left: 50px;
+	position: absolute;
+}
+
+.avatar{
+	border: 2px solid;
+	border-radius: 5px;
+	width: 150px;
+	height: 150px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+
+.name{
+	border: 2px solid blue;
+	border-radius: 5px;
+	width: 150px;
+	height: 30px;
+	margin: auto;
+	margin-top: 10px;
+
+}
+
+.bio{
+	border: 2px solid red;
+	border-radius: 5px;
+	width: 800px;
+	height: 300px;
+    margin-left: 250px;
+    margin-top: 30px;
+	position: relative;
+	
+}
+
+
+.achiev_frame{
+    border: 1px solid;
+    width: 800px;
+    height: 660px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #f0f0f0;
+}
+
+.achieve_bar{
+	border: 1px solid red;
+    width: 800px;
+    height: 70px;
+}
+
+
+.comment{
+	border: 1px solid blue;
+	width: 900px;
+	height: 300px;
+	margin: auto;
+	margin-top: 10px;
+	background-color: white;
+}
+
+
+
+.footer{
+	border: 1px solid grey;
+	width: 1100px;
+	height: 100px;
+	margin-top: 15px;
+	background-color: #195570;
+}
+
+
+
+.active{
+
+   background-color: #cc0000;
+}
