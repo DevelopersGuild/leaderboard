@@ -147,11 +147,18 @@ app.post('/register', function(req, res) {
   });
 
   user.save(function (err, user) {
-    if (err) return console.error(err);
+    if (err){
+
+      res.send(err.message);
+      return console.error(err);
+    }else{
+      res.send('Post received - Email: ' + email + ' Password: ' + password + ' Hashed Password: ' + hashedPassword);
+    } 
+
     console.dir(user)
   });
 
-    res.send('Post received - Email: ' + email + ' Password: ' + password + ' Hashed Password: ' + hashedPassword);
+    
 });
 
 var server = app.listen(app.get('port'), function() {
