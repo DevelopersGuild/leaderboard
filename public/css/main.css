@@ -25,9 +25,9 @@ body, html {
 .loginSearchBar {
   border:1px solid;
   border-radius: 2px;
-  width: 1100px;
+  width: 1090px;
   overflow: auto;
-  margin: 0 auto;
+  margin: 5px auto 5px auto;
 }
 
 .search {
@@ -69,15 +69,16 @@ body, html {
 .leaderBoard {
 	border-radius: 5px;
 	border: 1px solid;
-    height: 200px;
+    height: ;
     background-color: #69D2E7;
+    width: 1090px;
+    margin: 5px auto;
 }
 
 .logoContainer {
 	border: 1px solid;
     width: 400px;
-    margin: auto;
-    margin-top: 40px;
+  	margin: 10px auto;
 
 }
 
