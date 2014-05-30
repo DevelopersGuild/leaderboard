@@ -148,6 +148,19 @@ app.post('/register', function(req, res) {
 
   user.save(function (err, user) {
     if (err){
+<<<<<<< HEAD
+
+      res.send(err.message);
+      return console.error(err);
+    }else{
+      res.send('Post received - Email: ' + email + ' Password: ' + password + ' Hashed Password: ' + hashedPassword);
+    } 
+
+    console.dir(user)
+  });
+
+    
+=======
 	res.send(err.message);
 	 return console.error(err);
 	}
@@ -157,6 +170,7 @@ app.post('/register', function(req, res) {
     console.dir(user)
   });
 
+>>>>>>> 883044084954eccff8706e018fc5fb95839c0561
 });
 
 var server = app.listen(app.get('port'), function() {

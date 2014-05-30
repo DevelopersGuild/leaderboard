@@ -4,7 +4,12 @@ var Schema = mongoose.Schema
 
 module.exports = function(mongoose) {
     var User = new Schema({
+<<<<<<< HEAD
+        email               :    {type: String, index: true,
+                                  validate: [validate.email, 'invalid email address']},
+=======
         email               :    {type: String, index: true, required: true, validate: [validate.email, 'invalid email address']},
+>>>>>>> 883044084954eccff8706e018fc5fb95839c0561
         //id                  :    ObjectId,
         password            :    String,
         name                :    {
