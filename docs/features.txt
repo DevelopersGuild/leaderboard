@@ -1,0 +1,21 @@
+-Homepage/Leaderboard
+-Search
+-Login
+-User Profiles
+   .Personal Avatars
+   .Skills Score
+   .Achievement Score
+   .Bio
+-Weighted Skills
+-Comments
+-Endorse Skills
+-Groups
+-Leaderboard Leader gets special icon
+-Mouserover name (quick summary)
+-Ranking Up
+-Notifications
+-Levels
+-Experience Bar
+-Messaging
+-Badges
+-Trophies
