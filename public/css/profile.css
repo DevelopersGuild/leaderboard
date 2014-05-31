@@ -5,7 +5,7 @@
 .mainContainer{
 	border: 1px solid orange;
 	width: 1100px;
-	height: 1500px;
+	height: 1200px;
 	margin: auto;
 	background-color: #ecf0f1
 
@@ -38,10 +38,11 @@
   color: white;
 }
 
+
 .search {
   margin-right: 2px;
   margin-top: 10px;
-  width: 220px;
+  width: 140px;
   height: 24px;
   vertical-align: middle;
   background: transparent;
@@ -50,7 +51,7 @@
 
 .search-text {
 	border: none;
-	width: 190px;
+	width: 100px;
 	height: 18px;
 	background-image: url(https://d13yacurqjgara.cloudfront.net/assets/icon-search-26f72d08a1058cc4ddf5f675bdbe7dda.png);
 	border-radius: 4px;
@@ -60,6 +61,14 @@
 	background-repeat: no-repeat;
 	background-position: 7px 50%;
 	font-family: Helvetica, Arial, sans-serif;
+}
+
+.search-text:focus {
+	width: 180px;
+	position: relative;
+	left: -80px;
+	-webkit-transition: width 0.25s;
+	-webkit-transition: left 0.25s;
 }
 
 .profile_frame{
@@ -110,21 +119,32 @@
 	
 }
 
+.badges {
+	border: 2px solid green;
+	border-radius: 5px;
+	width: 770px;
+	height: 60px;
+	margin: auto;
+    margin-top: 190px;
+}
+
 
 .achiev_frame{
-    border: 1px solid;
+    border: 3px solid;
     width: 800px;
-    height: 660px;
+    height: 400px;
     margin: auto;
     margin-top: 10px;
     background-color: #f0f0f0;
+    overflow: scroll;
 }
+
 
 .achieve_bar{
 	border: 1px solid red;
     width: 800px;
     height: 70px;
-}
+}    
 
 
 .comment{

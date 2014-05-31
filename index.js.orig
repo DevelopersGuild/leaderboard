@@ -108,17 +108,26 @@ app.get('/login', function(req, res) {
 
 app.post('/login', function(req, res) {
     //res.writeHead(200,{'Content-Encoding':'utf-8'});
-    var username = req.body.username,
+    var username = req.body.email,
         password = req.body.password;
-<<<<<<< HEAD
-        salt = "lel";
-        hashedPassword = crypto.pbkdf2Sync(password, salt, 10000, 512);
-    res.send('Post received - Username: ' + username + ' Password: ' + password + ' Hashed Password: ' + 'hashedPassword');
-=======
     var hashedPassword = crypto.pbkdf2Sync(password,"DevelopersGuildTheSalt",999,16) ;
-    res.send('Post received - Username: ' + username + ' Password: ' + password + ' Hashed Password: ' + Buffer(hashedPassword, 'binary').toString('hex'));
+    var theUser;
+    var err;
+    models.Users.findOne({email: username}, function(err, theUser){
+    if(err){console.log(err);}
+	if(theUser != null){
+	if(theUser.password == hashedPassword){
+res.send("Login Successful!  ")	;	
+//res.send('Post received - Username: ' + username + ' Password: ' + password + ' Hashed Password: ' + Buffer(hashedPassword, 'binary').toString('hex'));
+	}else{
+		res.send("Password Incorrect!");
+	}
+    }
+    else{
+	res.send("User Not Found");
+	}
+});
 	
->>>>>>> 5da3d9d25e4bb5dbfcf49769640115453240a54f
 });
 
 app.get('/register', function(req, res) {
@@ -129,23 +138,28 @@ app.post('/register', function(req, res) {
 
 
   var email = req.body.email,
-      password = req.body.password;
+      password = req.body.password,
+      hashedPassword = crypto.pbkdf2Sync(password,"DevelopersGuildTheSalt",999,16)
 
   var user = new models.Users({
     email: email,
-    password: password
+    password: hashedPassword
   });
 
   user.save(function (err, user) {
-    if (err) return console.error(err);
+    if (err){
+	res.send(err.message);
+	 return console.error(err);
+	}
+    else{
+        res.send('Post received - Email: ' + email + ' Password: ' + password + ' Hashed Password: ' + hashedPassword);
+    }
     console.dir(user)
   });
 
-
-    res.send('Post received - Email: ' + email + ' Password: ' + password + ' Hashed Password: ' + hashedPassword);
 });
-
 
 var server = app.listen(app.get('port'), function() {
     console.log("\nNode.js server listening on port " + (app.get('port')))
+
 })
