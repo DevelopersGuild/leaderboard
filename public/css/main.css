@@ -49,7 +49,8 @@ body, html {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
   text-align: center;
-  background-color: rgba(49,207,66,1);
+  background-color: rgb(32,172,54);
+  /*background-color: rgba(49,207,66,1);*/
   padding: 3px;
   margin: 1px;
 }
@@ -69,7 +70,7 @@ body, html {
 .leaderBoard img {
 	margin: 0 auto;
 	display: block;
-	padding: 5px;
+	padding: 10px;
 
 }
 
@@ -122,21 +123,23 @@ body, html {
 /*//////////////////////////////////////////////////////////////////*/
 
 .color1 {
-	background-color: rgba(185,18,27,0.8);
+	
 }
 
 .color2 {
-	background-color: green;
+	
 }
 
 .lbContainer {
 	border: 1px solid orange;
 	width: 900px;
 	margin: 5px auto;
+	background-color: #fff;
+	padding: 2px;
 }
 
 .lbContainer2 {
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 	width: 298px;
 	float: left;
 	margin: auto;
@@ -145,7 +148,7 @@ body, html {
 }
 
 .lbMember {
-	border: 1px solid blue;
+	/*border: 1px solid blue;*/
 	width: 900px;
 	height:;
 	overflow: auto ;
@@ -153,16 +156,16 @@ body, html {
 }
 
 .lbAvatar {
+	border:1px solid orange;
 	height: 50px;
 	width: 50px;
-	border:1px solid orange;
 	float: left;
 	margin: 1px;
 }
 
 .lbWrap {
-	border: 1px solid green;
-	margin: auto;
+	/*border: 1px solid green;*/
+	margin: 0 auto;
 	text-align: center;
 	height: ;
 }
@@ -172,10 +175,39 @@ body, html {
 }
 
 .lbXpBar {
-	width: 150px;
-	margin:auto;
+	width: 290px;
+	margin: 0 auto;
+	padding: 0;
+	border-bottom: 1px solid rgba(26,55,69,0.5);
+
 }
 
+progress[value] {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 290px;
+	height: 51px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+ background-image:
+	   -webkit-linear-gradient(transparent 100%, rgba(0, 0, 0, .1) 100%, 
+	                           rgba(0,0, 0, .1) 100%, transparent 100%),
+	   -webkit-linear-gradient(top, 
+	                           rgba(255, 255, 255, .25), 
+	                           rgba(0, 0, 0, .25)),
+	   -webkit-linear-gradient(left, #0D1B21, #20AC36); 
+    border-radius: 2px; 
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
 
 /*//////////////////////////////////////////////////////////////////*/
 		/* FOOTER CSS */
@@ -221,7 +253,7 @@ body, html {
 	font-size: 0.8em;
 	font-family: 'Tahoma';
 	text-align: center;
-	color: #000;
+	color: #FFF;
 	padding: 0px 8px;
 }
 
