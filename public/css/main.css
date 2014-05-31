@@ -1,5 +1,56 @@
 @import url("buttons.css");
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+
+/*//////////////////////////////////////////////////////////////////*/
+		/* FONTS */
+/*//////////////////////////////////////////////////////////////////*/
+@font-face {
+    font-family: 'distant_galaxyregular';
+    src: url('webfontkit/DISTGRG_-webfont.eot');
+    src: url('webfontkit/DISTGRG_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfontkit/DISTGRG_-webfont.woff') format('woff'),
+         url('webfontkit/DISTGRG_-webfont.ttf') format('truetype'),
+         url('webfontkit/DISTGRG_-webfont.svg#distant_galaxyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('webfontkit/openSans-regular-webfont.eot');
+    src: url('webfontkit/openSans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfontkit/openSans-regular-webfont.woff') format('woff'),
+         url('webfontkit/openSans-regular-webfont.ttf') format('truetype'),
+         url('webfontkit/openSans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'komika_axisregular';
+    src: url('webfontkit/KOMIKAX_-webfont.eot');
+    src: url('webfontkit/KOMIKAX_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfontkit/KOMIKAX_-webfont.woff') format('woff'),
+         url('webfontkit/KOMIKAX_-webfont.ttf') format('truetype'),
+         url('webfontkit/KOMIKAX_-webfont.svg#komika_axisregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'akashiregular';
+    src: url('webfontkit/akashi-webfont.eot');
+    src: url('webfontkit/akashi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfontkit/akashi-webfont.woff') format('woff'),
+         url('webfontkit/akashi-webfont.ttf') format('truetype'),
+         url('webfontkit/akashi-webfont.svg#akashiregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /*//////////////////////////////////////////////////////////////////*/
 		/* MAIN CSS */
 /*//////////////////////////////////////////////////////////////////*/
@@ -11,10 +62,11 @@ body, html {
 }
 
 .mainContainer {
-  border: 1px solid orange; 
-  border-radius:5px;
+  /*border: 1px solid orange; */
+  border-radius: 2px;
   width: 1100px;
-  margin: auto;
+  margin: 10px auto;
+  padding: 3px;
   background-color: rgba(13,27,33,1);
   
   
@@ -26,11 +78,12 @@ body, html {
 
 .loginSearchBar {
   border:1px solid;
-  border-radius: 2px;
+  border-radius: 3px;
   width: 1090px;
   overflow: auto;
   margin: 5px auto;
-   background-color: rgba(0,184,255,1);
+  padding: 1px;
+  background-color: rgba(0,184,255,1);
 }
 
 .search {
@@ -38,30 +91,26 @@ body, html {
   float: right;
   margin: 1px;
   height: 31px;
+  font-family: 'open_sansregular';
 }
 
 .topbutton {
-  border-radius: 2px;
+  border-radius: 3px;
   border: none;
   float: right;
-  height: 25px;
+  height: 30px;
   width: 60px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'open_sansregular', sans-serif;
   font-size: 14px;
   text-align: center;
   background-color: rgb(32,172,54);
   /*background-color: rgba(49,207,66,1);*/
-  padding: 3px;
+  padding: 0;
   margin: 1px;
+  color: #FFF;
 }
 
-.topbutton a {
-	text-decoration: none;
-}
-.topbutton p {
-	margin-top: 5px;
-	color: white;
-}
+
 
 /*//////////////////////////////////////////////////////////////////*/
 		/* TITLE AND LOGO CSS */
@@ -75,7 +124,7 @@ body, html {
 }
 
 .leaderBoard {
-	border-radius: 1px;
+	border-radius: 2px;
 	background-color: rgba(0,184,255,1);
     width: 1090px;
     margin: 5px auto;
@@ -92,29 +141,33 @@ body, html {
 
 
 .leaderList {
-	border-radius: 1px;
+	border-radius: 2px;
 	background-color: rgba(0,184,255,1);
 	padding: 0;
 	width: 1090px;
-	margin: 6px auto;
+	margin: 0 auto;
 }
 
 .avatar {
-	border:1px solid #69D2E7;
-	border-radius: 100px;
+	border: none;
+	border-radius: 100%;
 	height: 150px;
 	width: 150px;
     display: inline-block;
-    margin-left: 20px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin: center;
+    margin: 5px;
 
 }
 
+.avatar:hover {
+	
+	box-shadow: 1px 1px 5px 3px rgba(13,27,33,1);
+}
+
+
+
 .topFiveFrame {
-	width: 910px;
-	margin: auto;
+	/*border: 1px solid black;*/
+	width: 820px;
 	margin: 0 auto;
 }
 
@@ -123,19 +176,21 @@ body, html {
 /*//////////////////////////////////////////////////////////////////*/
 
 .color1 {
-	
-}
+	background-color: rgba(163,166,163,0.7);
+	}
 
 .color2 {
+	background-color: rgba(163,166,163,0.4);
 	
 }
 
 .lbContainer {
-	border: 1px solid orange;
-	width: 900px;
+	/*border: 1px solid orange;*/
+	width: 708px;
 	margin: 5px auto;
 	background-color: #fff;
-	padding: 2px;
+	padding: 4px;
+	border-radius: 2px;
 }
 
 .lbContainer2 {
@@ -149,18 +204,19 @@ body, html {
 
 .lbMember {
 	/*border: 1px solid blue;*/
-	width: 900px;
+	width: 705px;
 	height:;
 	overflow: auto ;
 	
 }
 
 .lbAvatar {
-	border:1px solid orange;
+	/*border: 1px solid orange;*/
 	height: 50px;
 	width: 50px;
 	float: left;
-	margin: 1px;
+	margin: 6px auto 4px 4px;
+
 }
 
 .lbWrap {
@@ -171,14 +227,22 @@ body, html {
 }
 
 .lbName {
-	width:100px;
+	
+	padding: 0;
+	font-family: 'komika_axisregular';
 }
+.lbTotal {
+	/*border: 1px solid yellow;*/
+	float: left;
+	width: 100px;
+	font-family: 'komika_axisregular';
+}	
 
 .lbXpBar {
 	width: 290px;
-	margin: 0 auto;
-	padding: 0;
-	border-bottom: 1px solid rgba(26,55,69,0.5);
+	margin: 2px auto;
+	padding: 1px;
+	/*border-bottom: 1px solid rgba(26,55,69,0.5);*/
 
 }
 
@@ -187,7 +251,7 @@ progress[value] {
 	appearance: none;
 	width: 290px;
 	height: 51px;
-	margin: 0 auto;
+	margin: 4px auto;
 	padding: 0;
 }
 
@@ -214,26 +278,29 @@ progress[value]::-webkit-progress-value {
 /*//////////////////////////////////////////////////////////////////*/
 
 .footer {
-  border: 1px solid;
-  border-radius: 5px;
+  /*border: 1px solid;*/
+  border-radius: 2px;
   height: 30px;
   width: 1090px;
   margin: 5px auto;
-  background-color: ;
+  background-color: rgba(0,184,255,1);
 }
 
 .footer p {
-	border: 1px solid red;
+	/*border: 1px solid red;*/
+	-webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 	float: left;
 	margin: 0 auto;
-	padding: 3px;
-	font-size: 1.1em;
-	font-family: 'Tahoma';
+	padding: 4px 0px 0px 5px;
+	font-size: 1.3em;
+	font-family: 'akashiregular';
 	text-align: center;
+	
 }
 
 .footer ul {
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	float: right;
 	margin: 0 auto;
 	padding: 4px;
@@ -251,10 +318,15 @@ progress[value]::-webkit-progress-value {
 .footer ul li a {
 	text-decoration: none;
 	font-size: 0.8em;
-	font-family: 'Tahoma';
+	font-family: 'open_sansregular';
 	text-align: center;
 	color: #FFF;
 	padding: 0px 8px;
+}
+
+.footer ul li a:hover {
+	color: rgba(13,27,33,1);
+
 }
 
 /*//////////////////////////////////////////////////////////////////*/
