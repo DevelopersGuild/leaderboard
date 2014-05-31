@@ -1,5 +1,5 @@
 @import url("buttons.css");
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
 /*//////////////////////////////////////////////////////////////////*/
 		/* MAIN CSS */
 /*//////////////////////////////////////////////////////////////////*/
@@ -15,6 +15,8 @@ body, html {
   border-radius:5px;
   width: 1100px;
   margin: auto;
+  background-color: rgba(13,27,33,1);
+  
   
 }
 
@@ -27,25 +29,27 @@ body, html {
   border-radius: 2px;
   width: 1090px;
   overflow: auto;
-  margin: 5px auto 5px auto;
+  margin: 5px auto;
+   background-color: rgba(0,184,255,1);
 }
 
 .search {
   display: inline-block;
   float: right;
   margin: 1px;
-  height: 30px;
+  height: 31px;
 }
 
 .topbutton {
-  border-radius: 1px;
+  border-radius: 2px;
+  border: none;
   float: right;
   height: 25px;
   width: 60px;
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
   text-align: center;
-  background-color: #E74C3C;
+  background-color: rgba(49,207,66,1);
   padding: 3px;
   margin: 1px;
 }
@@ -63,84 +67,35 @@ body, html {
 /*//////////////////////////////////////////////////////////////////*/
 	
 .leaderBoard img {
-	height: 100px;
+	margin: 0 auto;
+	display: block;
+	padding: 5px;
+
 }
 
 .leaderBoard {
-	border-radius: 5px;
-	border: 1px solid;
-    height: ;
-    background-color: #69D2E7;
+	border-radius: 1px;
+	background-color: rgba(0,184,255,1);
     width: 1090px;
     margin: 5px auto;
-}
-
-.logoContainer {
-	border: 1px solid;
-    width: 400px;
-  	margin: 10px auto;
-
+    
 }
 
 
-.menu {
-	border: 1px solid;
-	width: 280px;
-	height: 50px;
-    float: right;
-    margin-top: 70px;
-    margin-right: 30px;
 
-}
-
-/*
-.menuButton {
-	border: 2px solid white;
-	height:40px;
-	width: 80px;
-	border-radius: 5px;
-	display: inline-block;
-	text-align: center;
-	margin-right: 3px;
-	margin-left: 3px;	
-	margin-top: 3px;
-	display: inline-block;
-	background-color: #69D2E7;
-}
-
-.menuButton p {
-	color: white;
-	font-size:15px;
-	font-family: Verdana;
-}
-*/
 
 /*//////////////////////////////////////////////////////////////////*/
 		/* LB LEADERS CSS */
 /*//////////////////////////////////////////////////////////////////*/
 
-.topFiveTitle {
-	border:1px solid;
-    height: 50px;
-    width: 250px;
-    text-align: center;
-    margin: auto;
-    margin-top: 15px;
-    background-color: #34495E
-    
-}
 
-.topFiveTitle p {
-	color: white;
-	font-size: 18px;
-	font-family: 'Raleway', sans-serif;
-}
 
 .leaderList {
-	border: 1px solid;
-	border-radius:5px;
-	background-color: #f1f2f2;
-	height: 300px;
+	border-radius: 1px;
+	background-color: rgba(0,184,255,1);
+	padding: 0;
+	width: 1090px;
+	margin: 6px auto;
 }
 
 .avatar {
@@ -157,10 +112,9 @@ body, html {
 }
 
 .topFiveFrame {
-	border: 1px solid;
 	width: 910px;
 	margin: auto;
-	margin-top: 5px;
+	margin: 0 auto;
 }
 
 /*//////////////////////////////////////////////////////////////////*/
@@ -174,10 +128,11 @@ body, html {
 .color2 {
 	background-color: green;
 }
+
 .lbContainer {
 	border: 1px solid orange;
 	width: 900px;
-	margin: 2px auto;
+	margin: 5px auto;
 }
 
 .lbContainer2 {
@@ -229,58 +184,51 @@ body, html {
 .footer {
   border: 1px solid;
   border-radius: 5px;
-  height: 150px;
-  margin-top: 1px;
-  background-color: #2c3e50;
-
-}
-
-
-.footRight {
-	border: 1px solid;
-	float: right;
-	height: 80px;
-	width: 300px;
-	margin-right: 20px;
-	margin-top: 20px;
-}
-
-.link {
-  border: 2px solid;
-  border-radius: 100px;
   height: 30px;
-  width: 30px;
-  text-align: center;
-  background-color: #fff;
+  width: 1090px;
+  margin: 5px auto;
+  background-color: ;
+}
 
+.footer p {
+	border: 1px solid red;
+	float: left;
+	margin: 0 auto;
+	padding: 3px;
+	font-size: 1.1em;
+	font-family: 'Tahoma';
+	text-align: center;
+}
+
+.footer ul {
+	border: 1px solid black;
+	float: right;
+	margin: 0 auto;
+	padding: 4px;
+	list-style-type: none;
+	width: 240px;
+
+}
+
+.footer ul li {
+	float: left;
+	padding: 0;
+
+}
+
+.footer ul li a {
+	text-decoration: none;
+	font-size: 0.8em;
+	font-family: 'Tahoma';
+	text-align: center;
+	color: #000;
+	padding: 0px 8px;
 }
 
 /*//////////////////////////////////////////////////////////////////*/
-		/* NVABAR CSS */
+		/* FOOTER CSS */
 /*//////////////////////////////////////////////////////////////////*/
 
-/*
-.groupBar
-{
-	border:1px solid;
-    height: 38px;
-    background-color: white;
-
-}
-
-
-.groupbuttonFrame
-{
-	border: 1px solid; 
-	border-radius: 2px;
-    width: 350px;
-    margin: auto;
-
-}
-
-
-
-} */
 
 /*//////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////////////////////////////*/
