@@ -64,8 +64,9 @@ body, html {
 .mainContainer { 
   border-radius:5px;
   width: 1100px;
-  margin: auto;
-  background-color: #252525;
+  margin: 10px auto;
+  padding: 3px;
+  background-color: rgba(37,37,37,1);
   
   
 }
@@ -79,17 +80,16 @@ body, html {
   border-radius: 2px;
   width: 1090px;
   overflow: auto;
-  margin: 4px auto;
-   background-color: #434343;
+  margin: 5px auto;
+  padding: 1px;
+   background-color: rgba(67,67,67,1);
 }
 
 .search {
   display: inline-block;
   float: right;
-
-  margin: 6px;
+  margin: 1px;
   height: 31px;
-
   font-family: 'open_sansregular';
 }
 
@@ -114,7 +114,7 @@ body, html {
 /*//////////////////////////////////////////////////////////////////*/
 		/* TITLE AND LOGO CSS */
 /*//////////////////////////////////////////////////////////////////*/
-	
+
 .leaderBoard img {
 	margin: 0 auto;
 	display: block;
@@ -123,8 +123,9 @@ body, html {
 }
 
 .leaderBoard {
-	border-radius: 1px;
-	background-color: #8EC3EF;
+	border-radius: 2px;
+	background-color: rgba(142,195,239,1);
+	width: 1090px;
     margin: 5px auto;
     
 }
@@ -139,38 +140,34 @@ body, html {
 
 
 .leaderList {
-	border-radius: 1px;
-	background-color: #4779AF;
-  height:180px;
+	border-radius: 2px;
+	background-color: rgb(0,71,121);
 	padding: 0;
 	width: 1090px;
-  margin: 10px 5px 20px 5px;
-  border-bottom: solid 10px rgb(30, 30, 30);
-  border-top: solid 10px rgb(171, 171, 171);
+  	margin: 10px 5px 20px 5px;
+  	border-bottom: solid 10px rgb(30, 30, 30);
+ 	border-top: solid 10px rgb(171, 171, 171);
 }
 
 .avatar {
-  border:10px solid #A5C7EC;
+  border: 2px solid rgb(165,199,236);
   border-radius: 140px;
   height: 140px;
   width: 140px;
-   display: inline-block;
-  margin: 0px auto;
-   margin-left: 5px;
-   margin-top: 10px;
-   margin-bottom: 10px;
-   margin-right: 5px;
+  display: inline-block;
+  margin: 5px;
+   
 }
 
 .avatar img {
   border-radius:140px;
   height:140px;
   width:140px;
-  margin-bottom: 30px;
+
 }
 
 .avatar:hover {
-	
+
 	box-shadow: 1px 1px 5px 3px rgba(13,27,33,1);
 }
 
@@ -187,18 +184,10 @@ body, html {
 /*//////////////////////////////////////////////////////////////////*/
  
 .lbContainer {
-<<<<<<< HEAD
-	/*border: 1px solid orange;*/
-	width: 705px;
+	width: 708px;
 	margin: 5px auto;
-	background-color: #fff;
-	padding: 5px;
+	padding: 4px;
 	border-radius: 2px;
-=======
-	width: 900px;
-	margin: 5px auto;
-	padding: 2px;
->>>>>>> b6d1a704fa562431eff4aa780f34254a464d4761
 }
 
 .lbContainer2 {
@@ -206,61 +195,40 @@ body, html {
 	width: 298px;
 	float: left;
 	margin: auto;
-
-
 }
 
 .lbMember {
 	/*border: 1px solid blue;*/
-	border-radius: 1px;
 	width: 705px;
 	height:;
 	overflow: auto ;
-<<<<<<< HEAD
-=======
-	background-color: #2C2236;
-  border-top: solid rgb(61, 52, 72) 4px;
-  border-bottom: solid rgb(30, 30, 30) 4px;
-  margin: 0px auto;
->>>>>>> b6d1a704fa562431eff4aa780f34254a464d4761
+	background-color: rgb(44,34,54);
+  	border-top: solid rgb(61, 52, 72) 4px;
+  	border-bottom: solid rgb(30, 30, 30) 4px;
+  	margin: 0 auto;
 }
-
-.lbMember:hover {
-	border: 1px solid rgb(32,172,54);
-}
-
 
 .lbAvatar {
-<<<<<<< HEAD
-	/*border: 1px solid orange;*/
-	border: 1px solid rgba(13,27,33,1) ;
-	height: 50px;
-	width: 50px;
-	float: left;
-	margin: 6px 0px 4px 5px;
-=======
-	border: 4px solid rgb(61, 52, 72);
-  border-radius: 50px;
+	border: 2px solid rgb(61, 52, 72);
+  	border-radius: 50px;
 	height: 50px;
 	width: 50px;
 	float: left;
 	margin: 6px auto 6px 6px;
->>>>>>> b6d1a704fa562431eff4aa780f34254a464d4761
-
 }
 
 .lbWrap {
 	/*border: 1px solid green;*/
 	margin: 0 auto;
 	text-align: center;
-  color:white;
+  	color:white;
 }
 
 .lbName {
-	
 	padding: 0;
 	font-family: 'komika_axisregular';
 }
+
 .lbTotal {
 	/*border: 1px solid yellow;*/
 	float: left;
@@ -309,22 +277,22 @@ progress[value]::-webkit-progress-value {
 
 .footer {
   border-top: 10px solid rgb(54, 54, 54);;
-  border-radius: 5px;
+  border-radius: 2px;
   height: 30px;
   width: 1090px;
-  margin: 15px auto;
-  padding: 5px;
+  margin: 5px auto;
+  
 }
 
 .footer p {
+	webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 	float: left;
 	margin: 0 auto;
 	padding: 4px 0px 0px 5px;
 	font-size: 1.3em;
 	font-family: 'akashiregular';
 	text-align: center;
-  color:white;
-  vertical-align: middle;
 }
 
 .footer ul {
