@@ -61,13 +61,11 @@ body, html {
 
 }
 
-.mainContainer {
-  /*border: 1px solid orange; */
-  border-radius: 2px;
+.mainContainer { 
+  border-radius:5px;
   width: 1100px;
-  margin: 10px auto;
-  padding: 3px;
-  background-color: rgba(13,27,33,1);
+  margin: auto;
+  background-color: #252525;
   
   
 }
@@ -77,20 +75,21 @@ body, html {
 /*//////////////////////////////////////////////////////////////////*/
 
 .loginSearchBar {
-  border:1px solid;
-  border-radius: 3px;
+  border:2px solid;
+  border-radius: 2px;
   width: 1090px;
   overflow: auto;
-  margin: 5px auto;
-  padding: 1px;
-  background-color: rgba(0,184,255,1);
+  margin: 4px auto;
+   background-color: #434343;
 }
 
 .search {
   display: inline-block;
   float: right;
-  margin: 1px;
-  height: 30px;
+
+  margin: 6px;
+  height: 31px;
+
   font-family: 'open_sansregular';
 }
 
@@ -124,9 +123,8 @@ body, html {
 }
 
 .leaderBoard {
-	border-radius: 2px;
-	background-color: rgba(0,184,255,1);
-    width: 1090px;
+	border-radius: 1px;
+	background-color: #8EC3EF;
     margin: 5px auto;
     
 }
@@ -141,21 +139,34 @@ body, html {
 
 
 .leaderList {
-	border-radius: 2px;
-	background-color: rgba(0,184,255,1);
+	border-radius: 1px;
+	background-color: #4779AF;
+  height:180px;
 	padding: 0;
 	width: 1090px;
-	margin: 0 auto;
+  margin: 10px 5px 20px 5px;
+  border-bottom: solid 10px rgb(30, 30, 30);
+  border-top: solid 10px rgb(171, 171, 171);
 }
 
 .avatar {
-	border: none;
-	border-radius: 100%;
-	height: 150px;
-	width: 150px;
-    display: inline-block;
-    margin: 5px;
+  border:10px solid #A5C7EC;
+  border-radius: 140px;
+  height: 140px;
+  width: 140px;
+   display: inline-block;
+  margin: 0px auto;
+   margin-left: 5px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   margin-right: 5px;
+}
 
+.avatar img {
+  border-radius:140px;
+  height:140px;
+  width:140px;
+  margin-bottom: 30px;
 }
 
 .avatar:hover {
@@ -174,23 +185,20 @@ body, html {
 /*//////////////////////////////////////////////////////////////////*/
 		/* LEADERBOARD LIST CSS */
 /*//////////////////////////////////////////////////////////////////*/
-
-.color1 {
-	background-color: rgba(163,166,163,0.7);
-	}
-
-.color2 {
-	background-color: rgba(163,166,163,0.4);
-	
-}
-
+ 
 .lbContainer {
+<<<<<<< HEAD
 	/*border: 1px solid orange;*/
 	width: 705px;
 	margin: 5px auto;
 	background-color: #fff;
 	padding: 5px;
 	border-radius: 2px;
+=======
+	width: 900px;
+	margin: 5px auto;
+	padding: 2px;
+>>>>>>> b6d1a704fa562431eff4aa780f34254a464d4761
 }
 
 .lbContainer2 {
@@ -208,6 +216,13 @@ body, html {
 	width: 705px;
 	height:;
 	overflow: auto ;
+<<<<<<< HEAD
+=======
+	background-color: #2C2236;
+  border-top: solid rgb(61, 52, 72) 4px;
+  border-bottom: solid rgb(30, 30, 30) 4px;
+  margin: 0px auto;
+>>>>>>> b6d1a704fa562431eff4aa780f34254a464d4761
 }
 
 .lbMember:hover {
@@ -216,12 +231,21 @@ body, html {
 
 
 .lbAvatar {
+<<<<<<< HEAD
 	/*border: 1px solid orange;*/
 	border: 1px solid rgba(13,27,33,1) ;
 	height: 50px;
 	width: 50px;
 	float: left;
 	margin: 6px 0px 4px 5px;
+=======
+	border: 4px solid rgb(61, 52, 72);
+  border-radius: 50px;
+	height: 50px;
+	width: 50px;
+	float: left;
+	margin: 6px auto 6px 6px;
+>>>>>>> b6d1a704fa562431eff4aa780f34254a464d4761
 
 }
 
@@ -229,7 +253,7 @@ body, html {
 	/*border: 1px solid green;*/
 	margin: 0 auto;
 	text-align: center;
-	height: ;
+  color:white;
 }
 
 .lbName {
@@ -284,41 +308,36 @@ progress[value]::-webkit-progress-value {
 /*//////////////////////////////////////////////////////////////////*/
 
 .footer {
-  /*border: 1px solid;*/
-  border-radius: 2px;
+  border-top: 10px solid rgb(54, 54, 54);;
+  border-radius: 5px;
   height: 30px;
   width: 1090px;
-  margin: 5px auto;
-  background-color: rgba(0,184,255,1);
+  margin: 15px auto;
+  padding: 5px;
 }
 
 .footer p {
-	/*border: 1px solid red;*/
-	-webkit-font-smoothing: antialiased;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 	float: left;
 	margin: 0 auto;
 	padding: 4px 0px 0px 5px;
 	font-size: 1.3em;
 	font-family: 'akashiregular';
 	text-align: center;
-	
+  color:white;
+  vertical-align: middle;
 }
 
 .footer ul {
-	/*border: 1px solid black;*/
 	float: right;
 	margin: 0 auto;
-	padding: 4px;
 	list-style-type: none;
 	width: 240px;
-
 }
 
 .footer ul li {
 	float: left;
 	padding: 0;
-
+  vertical-align: middle;
 }
 
 .footer ul li a {
@@ -381,12 +400,3 @@ progress[value]::-webkit-progress-value {
    background-color: #e74c3c;
 
 }
-
-
-
-
-
-
-
-
-
