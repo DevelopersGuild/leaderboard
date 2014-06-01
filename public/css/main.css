@@ -137,7 +137,6 @@ body, html {
 
 
 .leaderList {
-<<<<<<< HEAD
 	border-radius: 1px;
 	background-color: #4779AF;
   height:180px;
@@ -154,11 +153,11 @@ body, html {
   height: 140px;
   width: 140px;
    display: inline-block;
+  margin: 0px auto;
    margin-left: 5px;
    margin-top: 10px;
    margin-bottom: 10px;
    margin-right: 5px;
-
 }
 
 .avatar img {
@@ -188,7 +187,6 @@ body, html {
 .lbContainer {
 	width: 900px;
 	margin: 5px auto;
-	background-color: #2C2236;
 	padding: 2px;
 }
 
@@ -207,14 +205,18 @@ body, html {
 	height:;
 	overflow: auto ;
 	background-color: #2C2236;
+  border-top: solid rgb(61, 52, 72) 4px;
+  border-bottom: solid rgb(30, 30, 30) 4px;
+  margin: 0px auto;
 }
 
 .lbAvatar {
-	/*border: 1px solid orange;*/
+	border: 4px solid rgb(61, 52, 72);
+  border-radius: 50px;
 	height: 50px;
 	width: 50px;
 	float: left;
-	margin: 6px auto 4px 4px;
+	margin: 6px auto 6px 6px;
 
 }
 
@@ -222,7 +224,7 @@ body, html {
 	/*border: 1px solid green;*/
 	margin: 0 auto;
 	text-align: center;
-	height: ;
+  color:white;
 }
 
 .lbName {
@@ -369,12 +371,3 @@ progress[value]::-webkit-progress-value {
    background-color: #e74c3c;
 
 }
-
-
-
-
-
-
-
-
-
