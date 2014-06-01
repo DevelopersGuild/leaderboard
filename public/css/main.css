@@ -76,25 +76,26 @@ body, html {
 /*//////////////////////////////////////////////////////////////////*/
 
 .loginSearchBar {
-  border:2px solid;
+  
   border-radius: 2px;
   width: 1090px;
   overflow: auto;
   margin: 5px auto;
-  padding: 1px;
-   background-color: rgba(67,67,67,1);
+  padding: 2px;
+  background-color: rgba(67,67,67,1);
 }
 
 .search {
   display: inline-block;
   float: right;
   margin: 1px;
-  height: 31px;
+  height: 29px;
+  border-radius: 2px;
   font-family: 'open_sansregular';
 }
 
 .topbutton {
-  border-radius: 3px;
+  border-radius: 2px;
   border: none;
   float: right;
   height: 30px;
@@ -118,15 +119,18 @@ body, html {
 .leaderBoard img {
 	margin: 0 auto;
 	display: block;
-	padding: 10px;
+	padding: ;
 
 }
 
 .leaderBoard {
+	border-top: solid 2px rgb(171, 171, 171);
 	border-radius: 2px;
-	background-color: rgba(142,195,239,1);
+	/*background-color: rgba(142,195,239,1);*/
+	background-color: rgb(0,71,121);
 	width: 1090px;
     margin: 5px auto;
+    padding: 2px;
     
 }
 
@@ -142,11 +146,12 @@ body, html {
 .leaderList {
 	border-radius: 2px;
 	background-color: rgb(0,71,121);
-	padding: 0;
+	padding: 2px;
 	width: 1090px;
-  	margin: 10px 5px 20px 5px;
-  	border-bottom: solid 10px rgb(30, 30, 30);
- 	border-top: solid 10px rgb(171, 171, 171);
+  	margin: 0 auto;
+  	
+ 	border-top: solid 2px rgb(171, 171, 171);
+ 	/*border-bottom: solid 3px rgb(171, 171, 171);*/
 }
 
 .avatar {
@@ -188,6 +193,7 @@ body, html {
 	margin: 5px auto;
 	padding: 4px;
 	border-radius: 2px;
+	background-color: rgba(67,67,67,1);
 }
 
 .lbContainer2 {
@@ -276,16 +282,18 @@ progress[value]::-webkit-progress-value {
 /*//////////////////////////////////////////////////////////////////*/
 
 .footer {
-  border-top: 10px solid rgb(54, 54, 54);;
+  /*border: 1px solid;*/
+  border-top: solid 2px rgb(171, 171, 171);
   border-radius: 2px;
   height: 30px;
   width: 1090px;
   margin: 5px auto;
-  
+ background-color: rgb(0,71,121);
 }
 
 .footer p {
-	webkit-font-smoothing: antialiased;
+	/*border: 1px solid red;*/
+	-webkit-font-smoothing: antialiased;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 	float: left;
 	margin: 0 auto;
@@ -293,19 +301,23 @@ progress[value]::-webkit-progress-value {
 	font-size: 1.3em;
 	font-family: 'akashiregular';
 	text-align: center;
+
 }
 
 .footer ul {
+	/*border: 1px solid black;*/
 	float: right;
 	margin: 0 auto;
+	padding: 4px;
 	list-style-type: none;
 	width: 240px;
+
 }
 
 .footer ul li {
 	float: left;
 	padding: 0;
-  vertical-align: middle;
+
 }
 
 .footer ul li a {
@@ -318,7 +330,7 @@ progress[value]::-webkit-progress-value {
 }
 
 .footer ul li a:hover {
-	color: rgba(13,27,33,1);
+	color: rgb(32,172,54);
 
 }
 
