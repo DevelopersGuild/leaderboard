@@ -90,7 +90,7 @@ body, html {
   display: inline-block;
   float: right;
   margin: 1px;
-  height: 31px;
+  height: 30px;
   font-family: 'open_sansregular';
 }
 
@@ -186,10 +186,10 @@ body, html {
 
 .lbContainer {
 	/*border: 1px solid orange;*/
-	width: 708px;
+	width: 705px;
 	margin: 5px auto;
 	background-color: #fff;
-	padding: 4px;
+	padding: 5px;
 	border-radius: 2px;
 }
 
@@ -204,18 +204,24 @@ body, html {
 
 .lbMember {
 	/*border: 1px solid blue;*/
+	border-radius: 1px;
 	width: 705px;
 	height:;
 	overflow: auto ;
-	
 }
+
+.lbMember:hover {
+	border: 1px solid rgb(32,172,54);
+}
+
 
 .lbAvatar {
 	/*border: 1px solid orange;*/
+	border: 1px solid rgba(13,27,33,1) ;
 	height: 50px;
 	width: 50px;
 	float: left;
-	margin: 6px auto 4px 4px;
+	margin: 6px 0px 4px 5px;
 
 }
 
