@@ -64,8 +64,9 @@ body, html {
 .mainContainer { 
   border-radius:5px;
   width: 1100px;
-  margin: auto;
-  background-color: #252525;
+  margin: 10px auto;
+  padding: 3px;
+  background-color: rgba(37,37,37,1);
   
   
 }
@@ -75,24 +76,26 @@ body, html {
 /*//////////////////////////////////////////////////////////////////*/
 
 .loginSearchBar {
-  border:2px solid;
+  
   border-radius: 2px;
   width: 1090px;
   overflow: auto;
-  margin: 4px auto;
-   background-color: #434343;
+  margin: 5px auto;
+  padding: 2px;
+  background-color: rgba(67,67,67,1);
 }
 
 .search {
   display: inline-block;
   float: right;
-  margin: 6px;
-  height: 31px;
+  margin: 1px;
+  height: 29px;
+  border-radius: 2px;
   font-family: 'open_sansregular';
 }
 
 .topbutton {
-  border-radius: 3px;
+  border-radius: 2px;
   border: none;
   float: right;
   height: 30px;
@@ -112,18 +115,23 @@ body, html {
 /*//////////////////////////////////////////////////////////////////*/
 		/* TITLE AND LOGO CSS */
 /*//////////////////////////////////////////////////////////////////*/
-	
+
 .leaderBoard img {
 	margin: 0 auto;
 	display: block;
-	padding: 10px;
+	padding: ;
+
 
 }
 
 .leaderBoard {
-	border-radius: 1px;
-	background-color: #8EC3EF;
+	border-top: solid 2px rgb(171, 171, 171);
+	border-radius: 2px;
+	/*background-color: rgba(142,195,239,1);*/
+	background-color: rgb(0,71,121);
+	width: 1090px;
     margin: 5px auto;
+    padding: 2px;
     
 }
 
@@ -137,38 +145,36 @@ body, html {
 
 
 .leaderList {
-	border-radius: 1px;
-	background-color: #4779AF;
-  height:180px;
-	padding: 0;
+	border-radius: 2px;
+	background-color: rgb(0,71,121);
+	/*background-color: rgb(71,121,175);*/
+	padding: 2px;
 	width: 1090px;
-  margin: 10px 5px 20px 5px;
-  border-bottom: solid 10px rgb(30, 30, 30);
-  border-top: solid 10px rgb(171, 171, 171);
+  	margin: 0 auto;
+  	
+ 	border-top: solid 2px rgb(171, 171, 171);
+ 	/*border-bottom: solid 3px rgb(171, 171, 171);*/
 }
 
 .avatar {
-  border:10px solid #A5C7EC;
+  border: 2px solid rgb(165,199,236);
   border-radius: 140px;
   height: 140px;
   width: 140px;
-   display: inline-block;
-  margin: 0px auto;
-   margin-left: 5px;
-   margin-top: 10px;
-   margin-bottom: 10px;
-   margin-right: 5px;
+  display: inline-block;
+  margin: 5px;
+   
 }
 
 .avatar img {
   border-radius:140px;
   height:140px;
   width:140px;
-  margin-bottom: 30px;
+
 }
 
 .avatar:hover {
-	
+
 	box-shadow: 1px 1px 5px 3px rgba(13,27,33,1);
 }
 
@@ -176,18 +182,28 @@ body, html {
 
 .topFiveFrame {
 	/*border: 1px solid black;*/
-	width: 820px;
+	width: 786px;
 	margin: 0 auto;
 }
 
 /*//////////////////////////////////////////////////////////////////*/
 		/* LEADERBOARD LIST CSS */
 /*//////////////////////////////////////////////////////////////////*/
- 
+ .color1 {
+	background-color: rgba(163,166,163,0.7);
+	}
+
+.color2 {
+	background-color: rgba(163,166,163,0.4);
+
+}
+
 .lbContainer {
-	width: 900px;
+	width: 1090px;
 	margin: 5px auto;
 	padding: 2px;
+	border-radius: 2px;
+	background-color: rgba(67,67,67,1);
 }
 
 .lbContainer2 {
@@ -202,15 +218,15 @@ body, html {
 	width: 705px;
 	height:;
 	overflow: auto ;
-	background-color: #2C2236;
-  border-top: solid rgb(61, 52, 72) 4px;
-  border-bottom: solid rgb(30, 30, 30) 4px;
-  margin: 0px auto;
+	/*background-color: rgb(44,34,54);*/
+  	border-top: solid rgb(61, 52, 72) 4px;
+  	border-bottom: solid rgb(30, 30, 30) 4px;
+  	margin: 0 auto;
 }
 
 .lbAvatar {
-	border: 4px solid rgb(61, 52, 72);
-  border-radius: 50px;
+	border: 2px solid rgb(61, 52, 72);
+  	border-radius: 50px;
 	height: 50px;
 	width: 50px;
 	float: left;
@@ -221,14 +237,14 @@ body, html {
 	/*border: 1px solid green;*/
 	margin: 0 auto;
 	text-align: center;
-  color:white;
+  	color:white;
 }
 
 .lbName {
-	
 	padding: 0;
 	font-family: 'komika_axisregular';
 }
+
 .lbTotal {
 	/*border: 1px solid yellow;*/
 	float: left;
@@ -276,36 +292,44 @@ progress[value]::-webkit-progress-value {
 /*//////////////////////////////////////////////////////////////////*/
 
 .footer {
-  border-top: 10px solid rgb(54, 54, 54);;
-  border-radius: 5px;
+  /*border: 1px solid;*/
+  border-top: solid 2px rgb(171, 171, 171);
+  border-radius: 2px;
   height: 30px;
   width: 1090px;
-  margin: 15px auto;
-  padding: 5px;
+  margin: 5px auto;
+  padding: 2px;
+ background-color: rgb(0,71,121);
 }
 
 .footer p {
+	/*border: 1px solid red;*/
+	-webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 	float: left;
 	margin: 0 auto;
 	padding: 4px 0px 0px 5px;
 	font-size: 1.3em;
 	font-family: 'akashiregular';
 	text-align: center;
-  color:white;
-  vertical-align: middle;
+	color: #fff;
+
 }
 
 .footer ul {
+	/*border: 1px solid black;*/
 	float: right;
 	margin: 0 auto;
+	padding: 4px;
 	list-style-type: none;
 	width: 240px;
+
 }
 
 .footer ul li {
 	float: left;
 	padding: 0;
-  vertical-align: middle;
+
 }
 
 .footer ul li a {
@@ -318,7 +342,7 @@ progress[value]::-webkit-progress-value {
 }
 
 .footer ul li a:hover {
-	color: rgba(13,27,33,1);
+	color: rgb(32,172,54);
 
 }
 
