@@ -1,0 +1,65 @@
+.banner {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(70, 75, 107);
+  border-bottom: 10px rgb(51, 56, 75) solid;
+  padding-left: 20px;
+  line-height: 50px;
+  font-family: helvetica;
+  color: white;
+}
+
+.banner h3 {
+  vertical-align: middle;
+}
+
+.welcome {
+  color: black;
+  font-family: helvetica;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  background-color: rgb(180, 180, 180);
+  padding-left: 50px;
+}
+.navContainer {
+  background-color: rgb(239, 239, 239);
+  padding: 100px;
+  height: 100%;
+  width: 100%;
+}
+
+.navChoice {
+  border-radius: 4px;
+  border-top: rgb(84, 84, 84) 4px solid;
+  border-bottom: rgb(163, 163, 163) 4px solid;
+  width: 240px;
+  color: white;
+  margin: 50px;
+  font-family: helvetica;
+  background-color: gray;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.navChoice h3 {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.navChoice > .dropChoice {
+  display: none;
+  line-height: 30px;
+}
+
+.navChoice:hover > .dropChoice {
+  display:block;
+  padding-left: 30px;
+}
+
+.navChoice > .dropChoice:hover {
+  background-color: rgb(40, 40, 40);
+  height: 30px;
+  border-top:rgb(3, 3, 3) solid 2px;
+  border-bottom: rgb(148, 148, 148) solid 2px;
+}
