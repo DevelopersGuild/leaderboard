@@ -14,6 +14,7 @@ $('.groupbutton').hover(function(){
 });
 
 
+
 $('.search').focus(function() {
   ('input').css('outline-color', '#FF0000');
 });
