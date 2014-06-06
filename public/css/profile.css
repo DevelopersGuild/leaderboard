@@ -2,8 +2,8 @@
 		/* PROFILE CSS */
 /*//////////////////////////////////////////////////////////////////*/
 
-.mainContainer{
-	border: 1px solid orange;
+.mainContainer {
+	border: 1px solid #ECF0F1;
 	width: 1100px;
 	height: 1200px;
 	margin: auto;
@@ -11,8 +11,8 @@
 
 }
 
-.banner{
-	border: 1px solid;
+.banner {
+	border: 1px solid none;
 	height: 50px;
 	background-color: #1abc9c;
 	list-style: none;
@@ -21,7 +21,7 @@
 }
 
 .topbutton {
-  border-radius: 1px;
+  border-radius: 5px;
   height: 25px;
   width: 60px;
   font-family: 'Raleway', sans-serif;
@@ -71,16 +71,16 @@
 	-webkit-transition: left 0.25s;
 }
 
-.profile_frame{
-	border: 1px solid green;
+.profile_frame {
+	border: 1px solid #ECF0F1;
     width: 1100px;
     height: 360px;
     background-color: white;
 } 
 
 
-.info{
-	border: 1px solid;
+.info {
+	border: 1px solid none;
 	width: 160px;
 	height: 230px;
 	margin-top: 70px;
@@ -88,8 +88,8 @@
 	position: absolute;
 }
 
-.avatar{
-	border: 2px solid;
+.avatar {
+	border: 2px solid #E74C3C;
 	border-radius: 5px;
 	width: 150px;
 	height: 150px;
@@ -98,29 +98,32 @@
 }
 
 
-.name{
-	border: 2px solid blue;
+.name {
+	border: 2px solid #1abc9c;
 	border-radius: 5px;
 	width: 150px;
 	height: 30px;
 	margin: auto;
 	margin-top: 10px;
-
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    padding-bottom: 18px;
 }
 
-.bio{
-	border: 2px solid red;
+.bio {
+	border: 2px solid #E74C3C;
 	border-radius: 5px;
 	width: 800px;
 	height: 300px;
     margin-left: 250px;
     margin-top: 30px;
 	position: relative;
+	background-color: #ECF0F1;
 	
 }
 
 .badges {
-	border: 2px solid green;
+	border: 2px solid #1abc9c;
 	border-radius: 5px;
 	width: 770px;
 	height: 60px;
@@ -129,26 +132,30 @@
 }
 
 
-.achiev_frame{
-    border: 3px solid;
+.achiev_frame {
+    border: 3px solid #3498DB;
+    border-radius: 3px;
     width: 800px;
     height: 400px;
     margin: auto;
     margin-top: 10px;
-    background-color: #f0f0f0;
+    background-color: white;
     overflow: scroll;
+    overflow-style:;
 }
 
 
-.achieve_bar{
-	border: 1px solid red;
+.achieve_bar {
+	border: 1px solid white;
+	color: white;
     width: 800px;
     height: 70px;
+    font-family: Helvetica, Arial, sans-serif;
 }    
 
 
-.comment{
-	border: 1px solid blue;
+.comment {
+	border: none;
 	width: 900px;
 	height: 300px;
 	margin: auto;
@@ -156,9 +163,26 @@
 	background-color: white;
 }
 
+.comment-text {
+    border: 2px solid #bdc3c7;
+    color: #34495e;
+    border-radius: 5px;
+    width: 900px;
+    height: 300px;
+    margin: auto;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    outline: none;
+    -webkit-transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+}
+
+.comment-text:focus {
+	border-color: #1abc9c;
+    outline: none;
+}
 
 
-.footer{
+.footer {
 	border: 1px solid grey;
 	width: 1100px;
 	height: 100px;
@@ -168,7 +192,6 @@
 
 
 
-.active{
-
+.active { 
    background-color: #cc0000;
 }
