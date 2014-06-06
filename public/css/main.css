@@ -86,12 +86,35 @@ body, html {
 }
 
 .search {
-  display: inline-block;
-  float: right;
-  margin: 1px;
-  height: 29px;
-  border-radius: 2px;
-  font-family: 'open_sansregular';
+ 
+}
+
+.search-text {
+	border: none;
+	width: 100px;
+	height: 18px;
+	background-image: url('https://d13yacurqjgara.cloudfront.net/assets/icon-search-26f72d08a1058cc4ddf5f675bdbe7dda.png');
+	border-radius: 4px;
+	vertical-align: middle;
+	padding: 5px 5px 5px 25px;
+	font-size: 12px;
+	background-repeat: no-repeat;
+	background-position: 7px 50%;
+	font-family: Helvetica, Arial, sans-serif;
+	display: inline-block;
+  	float: right;
+  	margin: 1px;
+  	height: 29px;
+  	border-radius: 2px;
+  	font-family: 'open_sansregular';
+}
+
+.search-text:focus {
+	width: 180px;
+	position: relative;
+	/*left: -80px;*/
+	-webkit-transition: width 0.25s;
+	-webkit-transition: left 0.25s;
 }
 
 .topbutton {
