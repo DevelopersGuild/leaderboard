@@ -10,10 +10,14 @@ var express = require('express'),
     bodyParser = require('body-parser'); // for app.post
     crypto = require('crypto'); //Module for Hashing
     hasher = crypto.createHash('sha1');//Algorithm for hashing completely arbitrary
+    GitHubApi = require('github');
+    var githublel = require('octonode');
 
 
-
-
+var github = new GitHubApi({
+    // required
+    version: "3.0.0"
+  });
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/leaderboard');
@@ -102,6 +106,11 @@ app.get('/', function(req, res) {
     // });
 });
 
+
+
+
+
+
 app.get('/login', function(req, res) {
     res.sendfile(path.join(publicDir, '/login.html'));
 });
@@ -117,7 +126,88 @@ app.post('/login', function(req, res) {
     if(err){console.log(err);}
 	if(theUser != null){
 	if(theUser.password == hashedPassword){
-res.send("Login Successful!  ")	;	
+    res.send("Login Successful!  ")	;	
+
+
+
+      var OAuth2 = require('simple-oauth2')({
+      clientID: '586c76f27924fdc54e17',
+      clientSecret: '447dfc9b784cf4a224d055420d34896fa440fbe0',
+      site: 'https://github.com/login',
+      tokenPath: '/oauth/access_token'
+      });
+
+      // Authorization uri definition
+      var authorization_uri = OAuth2.AuthCode.authorizeURL({
+      redirect_uri: 'http://localhost:22223/callback',
+      scope: 'notifications, user',
+      state: '3(#0/!~'
+      });
+
+      // Initial page redirecting to Github
+      app.get('/auth', function (req, res) {
+      res.redirect(authorization_uri);
+      });
+
+      // Callback service parsing the authorization token and asking for the access token
+      app.get('/callback', function (req, res) {
+      var code = req.query.code; 
+      console.log('/callback');
+      OAuth2.AuthCode.getToken({
+      code: code,
+      redirect_uri: 'http://localhost:22223/callback'
+      }, saveToken);
+
+      function saveToken(error, result) {
+        if (error) { console.log('Access Token Error', error.message); }
+          token = OAuth2.AccessToken.create(result);
+          res.send('Access Granted. Github token created');
+
+       
+        console.log(token.token['access_token']);
+        var client = githublel.client('f2ea7352a4ceda5c9a79079ccf3e5e5406169f67');
+
+        client.get('/user', {}, function (err, status, body, headers) {
+        console.log(body); //json object
+        });   
+        }
+
+        
+
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //github.authenticate({
+    //type: "oauth",
+    //token: token
+    //});
+    //github.authorization.create({
+    //scopes: ["user", "public_repo", "repo", "repo:status", "gist"],
+    //note: "what this auth is for",
+    //note_url: "http://reddit.com",
+    //headers: {
+    //    "X-GitHub-OTP": "two-factor-code"
+    //}
+    //}, function(err, res) {
+    //  if (res.token) {
+    //      //save and use res.token as in the Oauth process above from now on
+    //    }
+    //});  
 //res.send('Post received - Username: ' + username + ' Password: ' + password + ' Hashed Password: ' + Buffer(hashedPassword, 'binary').toString('hex'));
 	}else{
 		res.send("Password Incorrect!");
