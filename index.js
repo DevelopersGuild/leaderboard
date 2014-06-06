@@ -111,6 +111,84 @@ app.get('/', function(req, res) {
 
 
 
+
+
+
+
+var OAuth2 = require('simple-oauth2')({
+      clientID: '586c76f27924fdc54e17',
+      clientSecret: '447dfc9b784cf4a224d055420d34896fa440fbe0',
+      site: 'https://github.com/login',
+      tokenPath: '/oauth/access_token'
+      });
+
+      // Authorization uri definition
+      var authorization_uri = OAuth2.AuthCode.authorizeURL({
+      redirect_uri: 'http://localhost:22223/callback',
+      scope: 'notifications, user',
+      state: '3(#0/!~'
+      });
+
+      // Initial page redirecting to Github
+      app.get('/auth', function (req, res) {
+      res.redirect(authorization_uri);
+      });
+
+      // Callback service parsing the authorization token and asking for the access token
+      app.get('/callback', function (req, res) {
+      var code = req.query.code; 
+      console.log('/callback');
+      OAuth2.AuthCode.getToken({
+      code: code,
+      redirect_uri: 'http://localhost:22223/callback '
+      }, saveToken);
+
+      function saveToken(error, result) {
+        if (error) { console.log('Access Token Error', error.message); }
+          token = OAuth2.AccessToken.create(result);
+          //res.send('Access Granted. Github token created');
+
+        
+        console.log(token.token.split('=')[1].split('&')[0]);
+        var client = githublel.client(token.token.split('=')[1].split('&')[0]);
+
+        client.get('/user', {}, function (err, status, body, headers) {
+        console.log(body.email); //json object
+
+        models.Users.findOne({email: body.email}, function(err, theUser){
+        if(err){console.log(err);}
+        if(theUser != null){
+        res.send("Login Successful!  ") ; 
+      
+    }else{
+      res.send("User doesn't exist");
+    }
+      });
+
+
+        });   
+        }
+        
+
+        
+
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 app.get('/login', function(req, res) {
     res.sendfile(path.join(publicDir, '/login.html'));
 });
@@ -155,7 +233,7 @@ app.post('/login', function(req, res) {
       console.log('/callback');
       OAuth2.AuthCode.getToken({
       code: code,
-      redirect_uri: 'http://localhost:22223/callback'
+      redirect_uri: 'http://localhost:22223/callback '
       }, saveToken);
 
       function saveToken(error, result) {
@@ -163,15 +241,14 @@ app.post('/login', function(req, res) {
           token = OAuth2.AccessToken.create(result);
           res.send('Access Granted. Github token created');
 
-       
-        console.log(token.token['access_token']);
-        var client = githublel.client('f2ea7352a4ceda5c9a79079ccf3e5e5406169f67');
+        
+        console.log(token.token.split('=')[1].split('&')[0]);
+        var client = githublel.client(token.token.split('=')[1].split('&')[0]);
 
         client.get('/user', {}, function (err, status, body, headers) {
-        console.log(body); //json object
+        console.log(body.email); //json object
         });   
         }
-
         
 
       });
