@@ -10,14 +10,11 @@ var express = require('express'),
     bodyParser = require('body-parser'); // for app.post
     crypto = require('crypto'); //Module for Hashing
     hasher = crypto.createHash('sha1');//Algorithm for hashing completely arbitrary
-    GitHubApi = require('github');
-    var githublel = require('octonode');
+
+var Grid = require('gridfs-stream');
 
 
-var github = new GitHubApi({
-    // required
-    version: "3.0.0"
-  });
+
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/leaderboard');
@@ -41,9 +38,10 @@ db.once('open', function callback () {
   // });
 });
 
-  var models = require('./app/models/model')(mongoose);
-
-
+  var models = require('./app/models/user')(mongoose);
+  var achievements = require('./app/models/achievement')(mongoose);
+  var imgPath = './public/img/avatar1.png';
+  var gfs = Grid(db, mongoose);
 
 console.log("hello!");
 
@@ -106,89 +104,6 @@ app.get('/', function(req, res) {
     // });
 });
 
-
-
-
-
-
-
-
-
-
-var OAuth2 = require('simple-oauth2')({
-      clientID: '586c76f27924fdc54e17',
-      clientSecret: '447dfc9b784cf4a224d055420d34896fa440fbe0',
-      site: 'https://github.com/login',
-      tokenPath: '/oauth/access_token'
-      });
-
-      // Authorization uri definition
-      var authorization_uri = OAuth2.AuthCode.authorizeURL({
-      redirect_uri: 'http://localhost:22223/callback',
-      scope: 'notifications, user',
-      state: '3(#0/!~'
-      });
-
-      // Initial page redirecting to Github
-      app.get('/auth', function (req, res) {
-      res.redirect(authorization_uri);
-      });
-
-      // Callback service parsing the authorization token and asking for the access token
-      app.get('/callback', function (req, res) {
-      var code = req.query.code; 
-      console.log('/callback');
-      OAuth2.AuthCode.getToken({
-      code: code,
-      redirect_uri: 'http://localhost:22223/callback '
-      }, saveToken);
-
-      function saveToken(error, result) {
-        if (error) { console.log('Access Token Error', error.message); }
-          token = OAuth2.AccessToken.create(result);
-          //res.send('Access Granted. Github token created');
-
-        
-        console.log(token.token.split('=')[1].split('&')[0]);
-        var client = githublel.client(token.token.split('=')[1].split('&')[0]);
-
-        client.get('/user', {}, function (err, status, body, headers) {
-        console.log(body.email); //json object
-
-        models.Users.findOne({email: body.email}, function(err, theUser){
-        if(err){console.log(err);}
-        if(theUser != null){
-        res.send("Login Successful!  ") ; 
-      
-    }else{
-      res.send("User doesn't exist");
-    }
-      });
-
-
-        });   
-        }
-        
-
-        
-
-      });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.get('/login', function(req, res) {
     res.sendfile(path.join(publicDir, '/login.html'));
 });
@@ -204,87 +119,7 @@ app.post('/login', function(req, res) {
     if(err){console.log(err);}
 	if(theUser != null){
 	if(theUser.password == hashedPassword){
-    res.send("Login Successful!  ")	;	
-
-
-
-      var OAuth2 = require('simple-oauth2')({
-      clientID: '586c76f27924fdc54e17',
-      clientSecret: '447dfc9b784cf4a224d055420d34896fa440fbe0',
-      site: 'https://github.com/login',
-      tokenPath: '/oauth/access_token'
-      });
-
-      // Authorization uri definition
-      var authorization_uri = OAuth2.AuthCode.authorizeURL({
-      redirect_uri: 'http://localhost:22223/callback',
-      scope: 'notifications, user',
-      state: '3(#0/!~'
-      });
-
-      // Initial page redirecting to Github
-      app.get('/auth', function (req, res) {
-      res.redirect(authorization_uri);
-      });
-
-      // Callback service parsing the authorization token and asking for the access token
-      app.get('/callback', function (req, res) {
-      var code = req.query.code; 
-      console.log('/callback');
-      OAuth2.AuthCode.getToken({
-      code: code,
-      redirect_uri: 'http://localhost:22223/callback '
-      }, saveToken);
-
-      function saveToken(error, result) {
-        if (error) { console.log('Access Token Error', error.message); }
-          token = OAuth2.AccessToken.create(result);
-          res.send('Access Granted. Github token created');
-
-        
-        console.log(token.token.split('=')[1].split('&')[0]);
-        var client = githublel.client(token.token.split('=')[1].split('&')[0]);
-
-        client.get('/user', {}, function (err, status, body, headers) {
-        console.log(body.email); //json object
-        });   
-        }
-        
-
-      });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //github.authenticate({
-    //type: "oauth",
-    //token: token
-    //});
-    //github.authorization.create({
-    //scopes: ["user", "public_repo", "repo", "repo:status", "gist"],
-    //note: "what this auth is for",
-    //note_url: "http://reddit.com",
-    //headers: {
-    //    "X-GitHub-OTP": "two-factor-code"
-    //}
-    //}, function(err, res) {
-    //  if (res.token) {
-    //      //save and use res.token as in the Oauth process above from now on
-    //    }
-    //});  
+res.send("Login Successful!  ")	;	
 //res.send('Post received - Username: ' + username + ' Password: ' + password + ' Hashed Password: ' + Buffer(hashedPassword, 'binary').toString('hex'));
 	}else{
 		res.send("Password Incorrect!");
@@ -296,6 +131,46 @@ app.post('/login', function(req, res) {
 });
 	
 });
+
+app.get('/achievement', function(req,res){
+    res.sendfile(path.join(publicDir, '/achievement.html'));
+});
+
+app.post('/achievement', function(req,res){
+	var name = req.body.name;
+	var achieve = new achievements.Achievements({name: name});
+	var imgName = "avatar1.png";
+	fs.createReadStream(imgPath);
+//        gfs.createWriteStream({filename: imgName, mode:"w+"});
+    	achieve.img.name = imgName;
+        achieve.img.contentType = 'image/png';
+	
+        achieve.save(function (err, achieve) {
+    	if (err){
+		res.send(err.message);
+	 	return console.error(err);
+		}
+	});
+        var user = models.Users.findOne({email: "achive@test.cc"}, function(err, user){ 
+	//var user = new models.Users({email: "achive@test.cc", password: "123455" });
+ 	console.log(user.id);
+	var userAchieve = models.UserAchievements.findOne({user: user._id}, function(err, userAchieve){
+//user.save();
+	userAchieve.achievements.push(achieve);
+	userAchieve.save(function (err, userAchieve) {
+    	if (err){
+		res.send(err.message);
+	 	return console.error(err);
+		}
+	});
+ 
+});
+});
+res.send('');
+//res.contentType(achieve.img.contentType);
+//res.send(achieve.img.data);
+});
+
 
 app.get('/register', function(req, res) {
     res.sendfile(path.join(publicDir, '/register.html'));

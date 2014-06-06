@@ -3,18 +3,11 @@ var validate = require('mongoose-validate')
 var Schema = mongoose.Schema
 
 module.exports = function(mongoose) {
-    var User = new Schema({
-        email               :    {type: String, index: true, required: true, validate: [validate.email, 'invalid email address']},
-        //id                  :    ObjectId,
-        password            :    String,
-        name                :    {
-            first           :    String,
-            last            :    String
-        }
-    });
-    // declare seat covers here too
-    var models = {
+var models = {
       Users : mongoose.model('Users', User)
+      UserAchivements : mongoose.model('UserAchivements', UserAchivement)
+      UserSkills : mongoose.model('UserSkills', UserSkill)	
+
     };
     return models;
 }
