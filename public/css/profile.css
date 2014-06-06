@@ -3,15 +3,79 @@
 /*//////////////////////////////////////////////////////////////////*/
 
 
-
 .profileWrapper {
 	border: 1px solid white;
 	width: 1090px;
-	height: 500px;
+	height: 700px;
+	position: relative;
 	margin: 0 auto;
+	display: block;
 }
 
 
+.bioWrapper {
+	border: 1px solid red;
+	width: 200px;
+	height: 600px;
+	float: left;
+	margin-top: 30px;
+	margin-left: 10px;
+}
+
+
+.name {
+	border: 1px solid white;
+	border-radius: 5px;
+	width: 150px;
+	height: 30px;
+	margin-top: 5px;
+	margin: auto;
+}
+
+
+.location {
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    margin-top: 5px;
+    margin: auto;
+}
+
+
+.joinTime {
+   border: 1px solid white;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    margin-top: 5px;
+    margin: auto;
+}
+
+.group {
+	border: 1px solid 5px;
+	border-radius: 5px;
+	widows: 150px;
+	height: 30px;
+	margin-top: 5px;
+	margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.comment {
+	float: bottom;
+}
 /*
 
 .mainContainer {
