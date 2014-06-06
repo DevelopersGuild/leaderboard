@@ -2,8 +2,21 @@
 		/* PROFILE CSS */
 /*//////////////////////////////////////////////////////////////////*/
 
+
+
+.profileWrapper {
+	border: 1px solid white;
+	width: 1090px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+
+/*
+
 .mainContainer {
 	border: 1px solid #ECF0F1;
+
 	width: 1100px;
 	height: 1200px;
 	margin: auto;
@@ -53,7 +66,7 @@
 	border: none;
 	width: 100px;
 	height: 18px;
-	background-image: url(https://d13yacurqjgara.cloudfront.net/assets/icon-search-26f72d08a1058cc4ddf5f675bdbe7dda.png);
+	background-image: url('https://d13yacurqjgara.cloudfront.net/assets/icon-search-26f72d08a1058cc4ddf5f675bdbe7dda.png');
 	border-radius: 4px;
 	vertical-align: middle;
 	padding: 5px 5px 5px 25px;
@@ -194,4 +207,4 @@
 
 .active { 
    background-color: #cc0000;
-}
+} */
