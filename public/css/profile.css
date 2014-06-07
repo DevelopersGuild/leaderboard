@@ -1,8 +1,36 @@
 /*//////////////////////////////////////////////////////////////////*/
-		/* PROFILE CSS */
+		/* FONTS CSS */
+/*//////////////////////////////////////////////////////////////////*/
+@font-face {
+    font-family: 'fontawesome';
+    src: url('webfontkit/fontawesome-webfont.eot');
+    src: url('webfontkit/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfontkit/fontawesome-webfont.woff') format('woff'),
+         url('webfontkit/fontawesome-webfont.ttf') format('truetype'),
+         url('webfontkit/fontawesome-webfont.svg#distant_galaxyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*//////////////////////////////////////////////////////////////////*/
+		/* FONTAWESOME ICONS CSS */
 /*//////////////////////////////////////////////////////////////////*/
 
+.fa {
+  display: inline-block;
+  font-family: 'fontawesome';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+/*//////////////////////////////////////////////////////////////////*/
+		/* PROFILE CSS */
+/*//////////////////////////////////////////////////////////////////*/
 .profileWrapper {
 	border: 1px solid white;
 	width: 1090px;
@@ -10,72 +38,92 @@
 	position: relative;
 	margin: 0 auto;
 	display: block;
+	padding: 0;
 }
 
 
 .bioWrapper {
-	border: 1px solid red;
-	width: 200px;
-	height: 600px;
-	float: left;
-	margin-top: 30px;
-	margin-left: 10px;
-}
-
-
-.name {
 	border: 1px solid white;
-	border-radius: 5px;
-	width: 150px;
-	height: 30px;
-	margin-top: 5px;
-	margin: auto;
+	width: 300px;
+	height: ; 
+	float: left;
+	margin:3px;
+	
+}
+
+.infoWrapper {
+	border: 1px solid white;
+	width: 774px;
+	float: left;
+	height: 200px;
+	margin: 3px;
 }
 
 
-.location {
-    border: 1px solid white;
-    border-radius: 5px;
-    width: 150px;
-    height: 30px;
-    margin-top: 5px;
-    margin: auto;
+.nameWrapper {
+	border: 1px solid white;
+	padding: 0;
+	margin: 0;
+}
+h1 {
+	padding: 10px;
+	margin: 0;
+}
+
+.fullname {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	font-size: 26px;
+	line-height: 20px;
+	text-overflow: ellipsis;
+	font-family: 'open_sansregular';
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+
+.username {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 24px;
+	color: white;
+	font-family: 'open_sansregular';
+	padding: 0;
+	margin: 0;
+}
+
+.bioDetailsWrapper {
+	margin-top: -15px;
+	padding: 0;
+}
+.bioDetailsWrapper ul {
+	border: 1px solid white;
+	list-style: none;
+	padding: 5px 0 5px 10px;
+	border-top: 1px solid white;
+	color: white;
+	font-family: 'open_sansregular';
+	font-size: 14px;
+}
+
+.fa-location:before {
+	content: '\f041';
+}
+
+.fa-clock:before {
+	content: '\f017';
 }
 
 
-.joinTime {
-   border: 1px solid white;
-    border-radius: 5px;
-    width: 150px;
-    height: 30px;
-    margin-top: 5px;
-    margin: auto;
-}
-
-.group {
-	border: 1px solid 5px;
-	border-radius: 5px;
-	widows: 150px;
-	height: 30px;
-	margin-top: 5px;
-	margin: auto;
-}
 
 
 
 
-
-
-
-
-
-
-
-
-
-.comment {
-	float: bottom;
-}
 /*
 
 .mainContainer {

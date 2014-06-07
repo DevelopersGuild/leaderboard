@@ -1,3 +1,4 @@
+@import url("profile.css");
 @import url("buttons.css");
 
 /*//////////////////////////////////////////////////////////////////*/
@@ -180,32 +181,39 @@ body, html {
 }
 
 .avatar {
-  border: 2px solid rgb(165,199,236);
-  border-radius: 140px;
-  height: 140px;
-  width: 140px;
+  /*border: 1px solid rgb(165,199,236);*/
+  border: 1px solid rgb(171, 171, 171);
+  border-radius: 2px;
+  height: 100px;
+  width: 100px;
   display: inline-block;
   margin: 5px;
    
 }
 
+.profAvatar {
+	height: 200px;
+	width: 200px;
+	vertical-align: middle;
+}
+
 .avatar img {
-  border-radius:140px;
-  height:140px;
-  width:140px;
+  border-radius:2px;
+  height:100px;
+  width:100px;
 
 }
 
 .avatar:hover {
 
-	box-shadow: 1px 1px 5px 3px rgba(13,27,33,1);
+	box-shadow: 0px 0px 5px 3px rgb(32,172,54);
 }
 
 
 
 .topFiveFrame {
 	/*border: 1px solid black;*/
-	width: 786px;
+	width: 576px;
 	margin: 0 auto;
 }
 
