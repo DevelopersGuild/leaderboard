@@ -56,7 +56,7 @@
 		/* MAIN CSS */
 /*//////////////////////////////////////////////////////////////////*/
 body, html {
-	background: url("../img/congruent_pentagon.png") repeat;
+	background: url("../img/bright_squares.png") repeat;
 	margin: 0;
 	padding: 0;
 
@@ -192,10 +192,17 @@ body, html {
 }
 
 .profAvatar {
-	height: 220px;
-	width: 220px;
+	height: 200px;
+	width: ;
 	vertical-align: middle;
+	padding-bottom: 10px;
+	border-radius: 3px;
 }
+
+.profAvatar img {
+	border-radius: 3px;
+}
+
 
 .avatar img {
   border-radius:2px;

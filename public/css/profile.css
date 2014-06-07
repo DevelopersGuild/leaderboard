@@ -32,7 +32,7 @@
 		/* PROFILE CSS */
 /*//////////////////////////////////////////////////////////////////*/
 .profileWrapper {
-	border: 1px solid white;
+	/*border: 1px solid white; */
 	width: 1090px;
 	height: 700px;
 	position: relative;
@@ -125,7 +125,7 @@ h1 {
 .bioGroupWrapper {
 	border-top: 1px solid white;
 	margin-top:;
-	padding: 5px;
+	padding: 4px;
 	height: 105px;
 	display: block;
 }
