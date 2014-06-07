@@ -43,17 +43,17 @@
 
 
 .bioWrapper {
-	border: 1px solid white;
-	width: 300px;
+	/*border: 1px solid white;*/
+	width: 280px;
 	height: ; 
 	float: left;
-	margin:3px;
+	margin: 3px;
 	
 }
 
 .infoWrapper {
 	border: 1px solid white;
-	width: 774px;
+	width: 796px;
 	float: left;
 	height: 200px;
 	margin: 3px;
@@ -61,12 +61,12 @@
 
 
 .nameWrapper {
-	border: 1px solid white;
+	/*border: 1px solid white;*/
 	padding: 0;
 	margin: 0;
 }
 h1 {
-	padding: 10px;
+	padding: 5px 0px 15px 10px;
 	margin: 0;
 }
 
@@ -98,15 +98,18 @@ h1 {
 }
 
 .bioDetailsWrapper {
-	margin-top: -15px;
+	border-top: 1px solid white;
+	margin-top: -10px;
 	padding: 0;
 }
 .bioDetailsWrapper ul {
-	border: 1px solid white;
+	/*border: 1px solid white;*/
+	/*border-top: 1px solid white;*/
 	list-style: none;
 	padding: 5px 0 5px 10px;
-	border-top: 1px solid white;
+	
 	color: white;
+	margin: 0;
 	font-family: 'open_sansregular';
 	font-size: 14px;
 }
@@ -119,7 +122,13 @@ h1 {
 	content: '\f017';
 }
 
-
+.bioGroupWrapper {
+	border-top: 1px solid white;
+	margin-top:;
+	padding: 5px;
+	height: 105px;
+	display: block;
+}
 
 
 
