@@ -55,8 +55,12 @@
 	border: 1px solid white;
 	width: 774px;
 	float: left;
-	height: 200px;
+	height: 392px;
 	margin: 3px;
+}
+
+.profAvatar {
+	margin: center;
 }
 
 
@@ -65,6 +69,7 @@
 	padding: 0;
 	margin: 0;
 }
+
 h1 {
 	padding: 10px;
 	margin: 0;
@@ -119,9 +124,64 @@ h1 {
 	content: '\f017';
 }
 
+.bioGroupWrapper {
+	border: 1px solid white;
+	margin-top: -15px;
+}
 
+.joinGroup {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	font-size: 12px;
+	line-height: 20px;
+	text-overflow: ellipsis;
+	font-family: 'open_sansregular';
+	color: white;
+	padding: 0;
+	margin: 0;
+}
 
+.belongGroup {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 24px;
+	color: white;
+	font-family: 'open_sansregular';
+	padding: 0;
+	margin: 0;
+}
 
+.intro {
+    border: 1px solid white;
+    width: 765px;
+    height: 200px;
+    margin: auto;
+    margin-top: 5px;
+    color: white;
+}
+
+.skill {
+    border: 1px solid white;
+    width: 380px;
+    height: 170px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+
+.badge {
+    border: 1px solid white;
+    width: 380px;
+    height: 170px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 3px;
+}
 
 
 /*
