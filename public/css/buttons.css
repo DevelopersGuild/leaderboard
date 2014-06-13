@@ -21,3 +21,39 @@
   background-color: #F6FF1A;
   color: #000;
 }
+
+.icon {
+  background-color: #FFF;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 100%;
+  background-image: url('../../dev/xbox.png') ;
+  background-size: contain;
+  background-size: 48px 48px;
+}
+
+.icon:hover {
+    border: 1px solid orange;
+}
+
+.icon2 {
+  background-color: #FFF;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 100%;
+  float: left;
+  margin: 3px;
+}
+
+
+
+.icon2 img {
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto;
+  width: 48px;
+  height: 48px;
+
+}

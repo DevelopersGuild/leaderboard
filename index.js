@@ -11,6 +11,7 @@ var express = require('express'),
     crypto = require('crypto'); //Module for Hashing
     hasher = crypto.createHash('sha1');//Algorithm for hashing completely arbitrary
 
+var Grid = require('gridfs-stream');
 
 
 
@@ -37,9 +38,10 @@ db.once('open', function callback () {
   // });
 });
 
-  var models = require('./app/models/model')(mongoose);
-
-
+  var models = require('./app/models/user')(mongoose);
+  var achievements = require('./app/models/achievement')(mongoose);
+  var imgPath = './public/img/avatar1.png';
+  var gfs = Grid(db, mongoose);
 
 console.log("hello!");
 
@@ -129,6 +131,46 @@ res.send("Login Successful!  ")	;
 });
 	
 });
+
+app.get('/achievement', function(req,res){
+    res.sendfile(path.join(publicDir, '/achievement.html'));
+});
+
+app.post('/achievement', function(req,res){
+	var name = req.body.name;
+	var achieve = new achievements.Achievements({name: name});
+	var imgName = "avatar1.png";
+	fs.createReadStream(imgPath);
+//        gfs.createWriteStream({filename: imgName, mode:"w+"});
+    	achieve.img.name = imgName;
+        achieve.img.contentType = 'image/png';
+	
+        achieve.save(function (err, achieve) {
+    	if (err){
+		res.send(err.message);
+	 	return console.error(err);
+		}
+	});
+        var user = models.Users.findOne({email: "achive@test.cc"}, function(err, user){ 
+	//var user = new models.Users({email: "achive@test.cc", password: "123455" });
+ 	console.log(user.id);
+	var userAchieve = models.UserAchievements.findOne({user: user._id}, function(err, userAchieve){
+//user.save();
+	userAchieve.achievements.push(achieve);
+	userAchieve.save(function (err, userAchieve) {
+    	if (err){
+		res.send(err.message);
+	 	return console.error(err);
+		}
+	});
+ 
+});
+});
+res.send('');
+//res.contentType(achieve.img.contentType);
+//res.send(achieve.img.data);
+});
+
 
 app.get('/register', function(req, res) {
     res.sendfile(path.join(publicDir, '/register.html'));

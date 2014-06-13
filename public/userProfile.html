@@ -4,34 +4,79 @@
 
 <head>
   <title>userProfile</title>
-  <link rel="stylesheet" type="text/css" href="css/profile.css"> 
-  <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+
+   <!-- <link rel="stylesheet" type="text/css" href="css/profile.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+
   <script src="../jqueryLibs/jquery-2.1.1.min.js"></script
   <script src="../jqueryLibs/jquery-ui-1.10.4.min.js"></script>
 
   <script src="js/script.js"></script>
-
-
 </head>
 
-
-
 <body>
-
 <div class="mainContainer">
 
-   <ul class="banner">
+   <div class="loginSearchBar">
+      <button class="topbutton">Login</button>
+      <button class="topbutton">Search</button>
 
-      <li class="topbutton"><a href="#"><p>Search</p></a></li>
-      <li class="topsearch">
-        <form class="search">
-          <input class="search-text" type="text" name="search" placeholder="Search" value/>
-        </form>
-      </li>
-   </ul>
+      <input class="search-text" type="search" name="search" placeholder="search"/>
+    </div>
 
 
-   <div class="profile_frame">
+    <div class="profileWrapper">
+    	<!-- USER INFO -->
+        <div class="bioWrapper">
+
+        	<!-- PROFILE AVATAR -->
+            <div class="profAvatar">
+                <img src="img/diamond.jpg">
+            </div>
+
+            <!-- USERNAME AND REALNAME -->
+            <div class="nameWrapper">
+                <h1>
+                    <span class="fullname">Saleh Kaddoura</span>
+                    <span class="username">salehkaddoura</span>
+                </h1>
+            </div>
+
+            <!-- LOCATION AND JOINED DATE -- >
+            <div class="bioDetailsWrapper">
+                <ul>
+                    <li><span class="fa fa-location"></span>
+                        Silicon Valley
+                    </li>
+                    <li>
+                        <span class="fa fa-clock"></span>
+                        <span class="joinLabel">Joined On</span>
+                        <span class="joinDate">February 14, 2014</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- GROUP ICONS GO HERE -->
+            <div class="bioGroupWrapper">
+                <div class="icon2"><img src="../dev/xbox.png" ></div>
+                <div class="icon2"><img src="../dev/android.png"></div>
+                <div class="icon2"><img src="../dev/ios.png" ></div>
+                <div class="icon2"><img src="../dev/windows8.png"></div>
+                <div class="icon2"><img src="../dev/xml.png" ></div>
+                <div class="icon2"><img src="../dev/java.png" ></div>
+            </div>
+        </div>
+
+        <!-- ABOUT ME AND SKILLS AND ACHIEVMENTS -->
+        <div class="infoWrapper">
+            
+        </div>
+    </div>
+
+
+   <!-- <div class="profile_frame">
  
       <div class="info">
         <div class="avatar"></div>
@@ -40,32 +85,40 @@
 
       <div class="bio">
         <p>Someone is shy.</p>
-        <div class="badges">Badges Go Here</div>
+        <div class="achievements">Badges Go Here</div>
       </div>
 
   </div>
 
 
 <div class="achiev_frame">
-   <div class="achieve_bar" style="background-color: #3498DB">Master CSS</div>
-    <div class="achieve_bar" style="background-color: #2980B9">Master HTML5</div>
-     <div class="achieve_bar" style="background-color: #3498DB">Master jQuery</div>
-      <div class="achieve_bar" style="background-color: #2980B9">Master JavaScript</div>
-       <div class="achieve_bar" style="background-color: #3498DB">Master Java</div>
-        <div class="achieve_bar" style="background-color: #2980B9">Chicken Ruby on Rails</div>
-         <div class="achieve_bar" style="background-color: #3498DB">Burrito</div>
-          <div class="achieve_bar" style="background-color: #2980B9">Double-double</div>
-           <div class="achieve_bar" style="background-color: #3498DB">Animal Style</div>
-</div>
-
-
-<div class="comment">
-  <input class="comment-text" type="text" name="comment" placeholder="Comment Here..."/>
-</div>
+<<<<<<< HEAD
+   <div class="skills_bar">Master CSS</div>
+    <div class="skills_bar">Master HTML5</div>
+     <div class="skills_bar">Master jQuery</div>
+      <div class="skills_bar">Master JavaScript</div>
+       <div class="skills_bar">Master Java</div>
+        <div class="skills_bar">Chicken Ruby on Rails</div>
+         <div class="skills_bar">Burrito</div>
+          <div class="skills_bar">Double-double</div>
+           <div class="skills_bar">Animal Style</div>
+</div> -->
 
 
 
-<div class="footer"></div>
+
+
+    <div class="footer">
+      <p>Developers Guild &copy; 2013</p>
+      
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Join the Team</a></li>
+      </ul>
+       
+
+    </div>
 
 
 </div>

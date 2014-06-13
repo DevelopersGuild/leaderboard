@@ -1,3 +1,4 @@
+@import url("profile.css");
 @import url("buttons.css");
 
 /*//////////////////////////////////////////////////////////////////*/
@@ -55,7 +56,7 @@
 		/* MAIN CSS */
 /*//////////////////////////////////////////////////////////////////*/
 body, html {
-	background: url("../img/congruent_pentagon.png") repeat;
+	background: url("../img/bright_squares.png") repeat;
 	margin: 0;
 	padding: 0;
 
@@ -74,6 +75,23 @@ body, html {
 /*//////////////////////////////////////////////////////////////////*/
 		/* SEARCHBAR LOGIN BTN CSS */
 /*//////////////////////////////////////////////////////////////////*/
+.navbar {
+	border: 1px solid white;
+	width: 1100px;
+	height: 30px;
+	display: block;
+	margin: 3px auto;
+	background: gray;
+}
+
+.navbar ul {
+	list-style-type: none;
+	margin: 0 auto;
+}
+
+.navbar ul li {
+	float: left;
+}
 
 .loginSearchBar {
   
@@ -86,12 +104,35 @@ body, html {
 }
 
 .search {
-  display: inline-block;
-  float: right;
-  margin: 1px;
-  height: 29px;
-  border-radius: 2px;
-  font-family: 'open_sansregular';
+ 
+}
+
+.search-text {
+	border: none;
+	width: 100px;
+	height: 18px;
+	background-image: url('https://d13yacurqjgara.cloudfront.net/assets/icon-search-26f72d08a1058cc4ddf5f675bdbe7dda.png');
+	border-radius: 4px;
+	vertical-align: middle;
+	padding: 5px 5px 5px 25px;
+	font-size: 12px;
+	background-repeat: no-repeat;
+	background-position: 7px 50%;
+	font-family: Helvetica, Arial, sans-serif;
+	display: inline-block;
+  	float: right;
+  	margin: 1px;
+  	height: 29px;
+  	border-radius: 2px;
+  	font-family: 'open_sansregular';
+}
+
+.search-text:focus {
+	width: 180px;
+	position: relative;
+	/*left: -80px;*/
+	-webkit-transition: width 0.25s;
+	-webkit-transition: left 0.25s;
 }
 
 .topbutton {
@@ -157,32 +198,46 @@ body, html {
 }
 
 .avatar {
-  border: 2px solid rgb(165,199,236);
-  border-radius: 140px;
-  height: 140px;
-  width: 140px;
+  /*border: 1px solid rgb(165,199,236);*/
+  border: 1px solid rgb(171, 171, 171);
+  border-radius: 2px;
+  height: 100px;
+  width: 100px;
   display: inline-block;
   margin: 5px;
    
 }
 
+.profAvatar {
+	height: 200px;
+	width: ;
+	vertical-align: middle;
+	padding-bottom: 10px;
+	border-radius: 3px;
+}
+
+.profAvatar img {
+	border-radius: 3px;
+}
+
+
 .avatar img {
-  border-radius:140px;
-  height:140px;
-  width:140px;
+  border-radius:2px;
+  height:100px;
+  width:100px;
 
 }
 
 .avatar:hover {
 
-	box-shadow: 1px 1px 5px 3px rgba(13,27,33,1);
+	box-shadow: 0px 0px 5px 3px rgb(32,172,54);
 }
 
 
 
 .topFiveFrame {
 	/*border: 1px solid black;*/
-	width: 786px;
+	width: 576px;
 	margin: 0 auto;
 }
 
@@ -199,7 +254,7 @@ body, html {
 }
 
 .lbContainer {
-	width: 1090px;
+	width: 1000px;
 	margin: 5px auto;
 	padding: 2px;
 	border-radius: 2px;
@@ -264,8 +319,8 @@ progress[value] {
 	-webkit-appearance: none;
 	appearance: none;
 	width: 290px;
-	height: 51px;
-	margin: 4px auto;
+	height: 35px;
+	margin: 10px auto;
 	padding: 0;
 }
 
