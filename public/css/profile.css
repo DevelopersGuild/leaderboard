@@ -7,7 +7,7 @@
     src: url('webfontkit/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
          url('webfontkit/fontawesome-webfont.woff') format('woff'),
          url('webfontkit/fontawesome-webfont.ttf') format('truetype'),
-         url('webfontkit/fontawesome-webfont.svg#distant_galaxyregular') format('svg');
+         url('webfontkit/fontawesome-webfont.svg#fontawesome') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -32,7 +32,7 @@
 		/* PROFILE CSS */
 /*//////////////////////////////////////////////////////////////////*/
 .profileWrapper {
-	border: 1px solid white;
+	/*border: 1px solid white; */
 	width: 1090px;
 	height: 700px;
 	position: relative;
@@ -43,19 +43,19 @@
 
 
 .bioWrapper {
-	border: 1px solid white;
-	width: 300px;
+	/*border: 1px solid white;*/
+	width: 280px;
 	height: ; 
 	float: left;
-	margin:3px;
+	margin: 3px;
 	
 }
 
 .infoWrapper {
 	border: 1px solid white;
-	width: 774px;
+	width: 796px;
 	float: left;
-	height: 392px;
+	height: 680px;
 	margin: 3px;
 }
 
@@ -63,15 +63,14 @@
 	margin: center;
 }
 
-
 .nameWrapper {
-	border: 1px solid white;
+	/*border: 1px solid white;*/
 	padding: 0;
 	margin: 0;
 }
 
 h1 {
-	padding: 10px;
+	padding: 5px 0px 15px 10px;
 	margin: 0;
 }
 
@@ -103,15 +102,18 @@ h1 {
 }
 
 .bioDetailsWrapper {
-	margin-top: -15px;
+	border-top: 1px solid white;
+	margin-top: -10px;
 	padding: 0;
 }
 .bioDetailsWrapper ul {
-	border: 1px solid white;
+	/*border: 1px solid white;*/
+	/*border-top: 1px solid white;*/
 	list-style: none;
 	padding: 5px 0 5px 10px;
-	border-top: 1px solid white;
+	
 	color: white;
+	margin: 0;
 	font-family: 'open_sansregular';
 	font-size: 14px;
 }
@@ -154,6 +156,11 @@ h1 {
 	font-family: 'open_sansregular';
 	padding: 0;
 	margin: 0;
+	border-top: 1px solid white;
+	margin-top:;
+	padding: 4px;
+	height: 105px;
+	display: block;
 }
 
 .intro {
@@ -161,69 +168,92 @@ h1 {
     width: 765px;
     height: 200px;
     margin: auto;
-    margin-top: 5px;
+    margin-top: 7px;
     color: white;
 }
 
 .skill {
     border: 1px solid white;
     width: 380px;
-    height: 170px;
+    height: 250px;
     float: left;
     margin-top: 5px;
-    margin-left: 3px;
+    margin-left: 14px;
 }
 
 .badge {
     border: 1px solid white;
     width: 380px;
-    height: 170px;
+    height: 350px;
     float: right;
     margin-top: 5px;
-    margin-right: 3px;
+    margin-right: 14px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.trophyContainer {
+	border: 1px solid white;
+	width: 375px;
+	height: 60px;
+}
+
+
+.trophyText {
+	border: none;
+	font-family: 'open_sansregular';
+	font-size: 14px;
+	margin-left: 60px;
+	margin-top: 8px;
+	vertical-align: center;
+	position: relative;
+}
+
+
+.icon2 {
+  background-color: #FFF;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 100%;
+  float: left;
+  margin: 3px;
+}
+
+
+
+.icon2 img {
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto;
+  width: 48px;
+  height: 48px;
+
+}
+
+.trophy {
+  background-color: #FFF;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 100%;
+  float: left;
+  margin: 3px;
+  margin-top: 6px;
+}
+
+.trophy img {
+  border-radius: 100%;
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin: auto;
+  margin-top: 8px;
 }
 
 
 /*
-
-.mainContainer {
-	border: 1px solid #ECF0F1;
-
-	width: 1100px;
-	height: 1200px;
-	margin: auto;
-	background-color: #ecf0f1
-
-}
-
-.banner {
-	border: 1px solid none;
-	height: 50px;
-	background-color: #1abc9c;
-	list-style: none;
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-
-.topbutton {
-  border-radius: 5px;
-  height: 25px;
-  width: 60px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
-  text-align: center;
-  background-color: #E74C3C;
-  float: right;
-  margin-top: 10px;
-  margin-right: 10px;
-}
-
-.topbutton p {
-  margin-top: 5px;	 
-  color: white;
-}
-
-
 .search {
   margin-right: 2px;
   margin-top: 10px;
@@ -255,128 +285,4 @@ h1 {
 	-webkit-transition: width 0.25s;
 	-webkit-transition: left 0.25s;
 }
-
-.profile_frame {
-	border: 1px solid #ECF0F1;
-    width: 1100px;
-    height: 360px;
-    background-color: white;
-} 
-
-
-.info {
-	border: 1px solid none;
-	width: 160px;
-	height: 230px;
-	margin-top: 70px;
-	margin-left: 50px;
-	position: absolute;
-}
-
-.avatar {
-	border: 2px solid #E74C3C;
-	border-radius: 5px;
-	width: 150px;
-	height: 150px;
-	margin: auto;
-	margin-top: 20px;
-}
-
-
-.name {
-	border: 2px solid #1abc9c;
-	border-radius: 5px;
-	width: 150px;
-	height: 30px;
-	margin: auto;
-	margin-top: 10px;
-    font-family: Helvetica, Arial, sans-serif;
-    text-align: center;
-    padding-bottom: 18px;
-}
-
-.bio {
-	border: 2px solid #E74C3C;
-	border-radius: 5px;
-	width: 800px;
-	height: 300px;
-    margin-left: 250px;
-    margin-top: 30px;
-	position: relative;
-	background-color: #ECF0F1;
-	
-}
-
-.badges {
-	border: 2px solid #1abc9c;
-	border-radius: 5px;
-	width: 770px;
-	height: 60px;
-	margin: auto;
-    margin-top: 190px;
-}
-
-
-.achiev_frame {
-    border: 3px solid #3498DB;
-    border-radius: 3px;
-    width: 800px;
-    height: 400px;
-    margin: auto;
-    margin-top: 10px;
-    background-color: white;
-    overflow: scroll;
-    overflow-style:;
-}
-
-
-.achieve_bar {
-	border: 1px solid white;
-	color: white;
-    width: 800px;
-    height: 70px;
-    font-family: Helvetica, Arial, sans-serif;
-}    
-
-
-.comment {
-	border: none;
-	width: 900px;
-	height: 300px;
-	margin: auto;
-	margin-top: 10px;
-	background-color: white;
-}
-
-.comment-text {
-    border: 2px solid #bdc3c7;
-    color: #34495e;
-    border-radius: 5px;
-    width: 900px;
-    height: 300px;
-    margin: auto;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    outline: none;
-    -webkit-transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
-}
-
-.comment-text:focus {
-	border-color: #1abc9c;
-    outline: none;
-}
-
-
-.footer {
-	border: 1px solid grey;
-	width: 1100px;
-	height: 100px;
-	margin-top: 15px;
-	background-color: #195570;
-}
-
-
-
-.active { 
-   background-color: #cc0000;
-} */
+*/
