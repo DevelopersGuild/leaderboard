@@ -55,16 +55,20 @@
 	border: 1px solid white;
 	width: 796px;
 	float: left;
-	height: 200px;
+	height: 680px;
 	margin: 3px;
 }
 
+.profAvatar {
+	margin: center;
+}
 
 .nameWrapper {
 	/*border: 1px solid white;*/
 	padding: 0;
 	margin: 0;
 }
+
 h1 {
 	padding: 5px 0px 15px 10px;
 	margin: 0;
@@ -123,6 +127,35 @@ h1 {
 }
 
 .bioGroupWrapper {
+	border: 1px solid white;
+	margin-top: -15px;
+}
+
+.joinGroup {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	font-size: 12px;
+	line-height: 20px;
+	text-overflow: ellipsis;
+	font-family: 'open_sansregular';
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+
+.belongGroup {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 24px;
+	color: white;
+	font-family: 'open_sansregular';
+	padding: 0;
+	margin: 0;
 	border-top: 1px solid white;
 	margin-top:;
 	padding: 4px;
@@ -130,14 +163,94 @@ h1 {
 	display: block;
 }
 
+.intro {
+    border: 1px solid white;
+    width: 765px;
+    height: 200px;
+    margin: auto;
+    margin-top: 7px;
+    color: white;
+}
+
+.skill {
+    border: 1px solid white;
+    width: 380px;
+    height: 250px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 14px;
+}
+
+.badge {
+    border: 1px solid white;
+    width: 380px;
+    height: 350px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 14px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.trophyContainer {
+	border: 1px solid white;
+	width: 375px;
+	height: 60px;
+}
+
+
+.trophyText {
+	border: none;
+	font-family: 'open_sansregular';
+	font-size: 14px;
+	margin-left: 60px;
+	margin-top: 8px;
+	vertical-align: center;
+	position: relative;
+}
+
+
+.icon2 {
+  background-color: #FFF;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 100%;
+  float: left;
+  margin: 3px;
+}
 
 
 
+.icon2 img {
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto;
+  width: 48px;
+  height: 48px;
 
+}
 
+.trophy {
+  background-color: #FFF;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 100%;
+  float: left;
+  margin: 3px;
+  margin-top: 6px;
+}
 
-
-
+.trophy img {
+  border-radius: 100%;
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin: auto;
+  margin-top: 8px;
+}
 
 
 /*
