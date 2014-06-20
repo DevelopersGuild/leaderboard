@@ -76,61 +76,44 @@ body, html {
 .wrapper {
 	width: 1100px;
 	margin: 0 auto;
-	position:relative;
+	position: relative;
 	font-family: 'open_sansregular';
 	font-size: 11px;
 	/*background-color: rgba(37,37,37,1);*/
 	background: transparent;
-	border: 1px solid black;
-	height: 240px;
+	
+	height: ;
+	overflow: hidden;
 }
 
 .header {
 	
-	border: 1px solid black;
-	display: block;
-	width: 600px;
-	
-}
-
-.test1 {
-	border: 1px solid black;
-	width: 500px;
-	height: 30px;
-	display: block;
-	position: absolute;
-	right: 0;
-}
-
-.test2 {
-	border: 1px solid red;
 	width: 1100px;
-	height: 200px;
+	height:;
+	margin: 0 ;
 	display: block;
 	position: relative;
-}
-
-.test3 {
-	border: 1px solid black;
-	width: 100px;
-	height: 20px;
-	position: absolute;
-	bottom: 20px;
-	right: 0;
+	float: right;
+	background:  ;
 }
 
 /*//////////////////////////////////////////////////////////////////*/
 		/* SEARCHBAR LOGIN BTN CSS */
 /*//////////////////////////////////////////////////////////////////*/
 .searchBar {
-	width: 200px;
-	height: 20px;
-	border: 1px solid black;
+	width: 300px;
+	height: ;
+	border: none;
+	position: absolute;
+	bottom: 50px;
+	right: 5px;
+
 	
 }
 .logo {
 	width: 400px;
 	height: 109px;
+	margin: ;
 }
 
 .navbar {
@@ -138,11 +121,11 @@ body, html {
 	width: 1100px;
 	height:;
 	display: block;
-	margin: 0 1px;
-	position: absolute;
-	top: 0;
-	right: 0;
-	background: gray;
+	margin: 2px 0;
+	background: transparent;
+	display: block;
+	position: relative;
+	float: right;
 }
 
 .navbar ul {
@@ -151,29 +134,36 @@ body, html {
 	margin: 0 auto;
 	float: right;
 	height: auto;
-	width: 350px;
+	width: 346px;
 	padding: 0;
+	background:rgba(163,166,163,0.9);
 }
 
 .navbar ul li {
 	float: left;
 	display: block;
 	padding: 6px 10px;
-		border: 1px solid white;
+	
 
 }
+
+.left {
+	border-right: 1px solid  rgba(37,37,37,0.4);
+}
+
+
 
 .navbar ul li a {
 	text-decoration: none;
 	font-size: 12px;
 	font-family: 'open_sansregular';
-
+	color: rgb(0,71,121);
 }
 
 
 
 
-.loginSearchBar {
+/*.loginSearchBar {
   
   border-radius: 2px;
   width: 1090px;
@@ -185,11 +175,11 @@ body, html {
 
 .search {
  
-}
+}*/
 
 .search-text {
 	border: none;
-	width: 100px;
+	width: 300px;
 	height: 18px;
 	background-image: url('https://d13yacurqjgara.cloudfront.net/assets/icon-search-26f72d08a1058cc4ddf5f675bdbe7dda.png');
 	border-radius: 4px;
@@ -207,13 +197,15 @@ body, html {
   	font-family: 'open_sansregular';
 }
 
-.search-text:focus {
-	width: 180px;
+/*.search-text:focus {
+	width: 300px;
 	position: relative;
-	/*left: -80px;*/
+	left: -80px;
 	-webkit-transition: width 0.25s;
 	-webkit-transition: left 0.25s;
-}
+	transition: width 0.25s;
+	transition: left 0.25s;
+} */
 
 .topbutton {
   border-radius: 2px;
@@ -271,7 +263,7 @@ body, html {
 	padding: 2px;
 	width: 1090px;
   	margin: 0 auto;
-  text-align: center;
+  	text-align: center;
  	border-top: solid 2px rgb(171, 171, 171);
  	/*border-bottom: solid 3px rgb(171, 171, 171);*/
 }
